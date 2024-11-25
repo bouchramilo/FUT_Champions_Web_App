@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lire la valeur d'un select</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white shadow-lg p-6 rounded-lg">
+        <label for="positionJoueur" class="block mb-2 font-bold">Position du joueur :</label>
+        <select id="positionJoueur" class="w-full p-2 border border-gray-300 rounded-md mb-4">
+            <option value="GK">Gardien (GK)</option>
+            <option value="CB">Défenseur central (CB)</option>
+            <option value="LB">Arrière gauche (LB)</option>
+            <option value="RB">Arrière droit (RB)</option>
+            <option value="CM">Milieu de terrain (CM)</option>
+            <option value="ST">Attaquant (ST)</option>
+        </select>
+
+        <button id="readButton" class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">
+            Lire la position
+        </button>
+
+        <p id="result" class="mt-4 text-gray-700 font-semibold"></p>
+    </div>
+
+    <script>
+        // Récupérer les éléments
+        const selectElement = document.getElementById("positionJoueur");
+        const readButton = document.getElementById("readButton");
+        const result = document.getElementById("result");
+
+        // Ajouter un événement sur le bouton
+        readButton.addEventListener("click", () => {
+            // Lire la valeur sélectionnée dans le select
+            const selectedValue = selectElement.value;
+
+            // Afficher la valeur dans le paragraphe
+            result.textContent = `Position sélectionnée : ${selectedValue}`;
+        });
+    </script>
+</body>
+
+</html>
