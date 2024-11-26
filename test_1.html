@@ -15,7 +15,7 @@
     <!-- ============================================================================================================================== -->
     <!-- section en haut -->
     <section class="bg-blue-400 w-full h-20 flex flex-col justify-center items-center">
-        <select name="formation" id="formation" class="lg:w-3/12 max-sm:w-[90%] max-md:[90%] p-2 mb-2 border border-gray-300 rounded-md">
+        <select name="formation" id="formation" class="w-3/12 p-2 mb-2 border border-gray-300 rounded-md">
             <option value="1-4-4-2">4-4-2</option>
             <option value="1-4-3-3">4-3-3</option>
         </select>
@@ -26,171 +26,35 @@
 
     <!-- ============================================================================================================================== -->
     <!-- section principal  -->
-    <section class="flex lg:flex-row md:flex-col max-md:flex-col max-md w-full h-full bg-blue-200 ">
+    <section class="flex flex-row w-full h-full bg-blue-200 ">
 
-        <!-- forme +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-        <div class=" lg:w-3/12 md:w-full max-md:w-full py-2 bg-yellow-400  ">
-
-            <form class="px-2 text-sm">
-                <h2 class="text-2xl text-center mb-4">
-                    Formulaire de saisie les données d'un joueur
-                </h2>
-
-                <div class="w-full max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="nomJoueur">Nom du joueur :</label>
-                        <input type="text" id="nomJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez le nom du joueur">
-                    </div>
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="photo">Photo de joueur :</label>
-                        <input type="url" id="photoJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez la photo du joueur">
-                    </div>
-                </div>
-
-                <div class="w-full max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="flag">Drapeau :</label>
-                        <input type="url" id="flagJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez url de flag de nationalité du joueur">
-
-                    </div>
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="nationality">nationalité :</label>
-                        <input type="text" id="nationalityJoueur"
-                            class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez nationalité du joueur">
-
-                    </div>
-                </div>
-
-                <div class="w-full max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="club">Club :</label>
-                        <input type="text" id="clubJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez le nom du club du joueur">
-
-                    </div>
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="logoClub">logo du Club :</label>
-                        <input type="url" id="logoClubJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez url de logo du club du joueur">
-
-                    </div>
-                </div>
-
-                <div class="w-full max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="position">Position de joueur
-                            :</label>
-                        <select name="positionJoueur" id="positionJoueur"
-                            class="w-full p-2 mb-2 border border-gray-300 rounded-md">
-                            <!-- <option value="">position</option> -->
-                            <option value="GK">GK</option>
-                            <option value="CB1">CB1</option>
-                            <option value="CB2">CB2</option>
-                            <option value="RB">RB</option>
-                            <option value="LB">LB</option>
-                            <option value="CM1">CM1</option>
-                            <option value="CM2">CM2</option>
-                            <option value="CM3">CM3</option>
-                            <option value="LW">LW</option>
-                            <option value="RW">RW</option>
-                            <option value="ST">ST</option>
-                        </select><br>
-                    </div>
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="rating">rating Joueur :</label>
-                        <input type="number" id="ratingJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez rating ">
-                    </div>
-                </div>
-
-                <div class="w-full max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="pace">pace Joueur :</label>
-                        <input type="number" id="paceJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="Entrez pace">
-
-                    </div>
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="shooting">shooting Joueur :</label>
-                        <input type="number" id="shootingJoueur"
-                            class="w-full p-2 mb-2 border border-gray-300 rounded-md" placeholder="Entrez shooting ">
-                    </div>
-                </div>
-
-                <div class="w-full max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="passing">passing Joueur :</label>
-                        <input type="number" id="passingJoueur"
-                            class="w-full p-2 mb-2 border border-gray-300 rounded-md" placeholder="Entrez passing">
-
-                    </div>
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="dribbling">dribbling Joueur
-                            :</label>
-                        <input type="number" id="dribblingJoueur"
-                            class="w-full p-2 mb-2 border border-gray-300 rounded-md" placeholder="Entrez dribbling">
-                    </div>
-                </div>
-
-                <div class="w-full max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="defending">defending Joueur
-                            :</label>
-                        <input type="number" id="defendingJoueur"
-                            class="w-full p-2 mb-2 border border-gray-300 rounded-md" placeholder="Entrez defending">
-
-                    </div>
-                    <div class="max-md:w-1/2 md:w-1/2 max-sm:w-full">
-                        <label class="pl-4" for="physical">physical Joueur :</label>
-                        <input type="number" id="physicalJoueur"
-                            class="w-full p-2 mb-2 border border-gray-300 rounded-md" placeholder="Entrez physical">
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <button type="submit" id="addPlayer"
-                        class="w-1/3  py-2 bg-green-600 text-white rounded-md hover:bg-green-900">
-                        Ajouter joueur
-                    </button>
-                </div>
-            </form>
-
-        </div>
-        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-        <!-- stadium +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-        <div
-            class="lg:w-9/12 md:w-full max-md:w-full max-sm:w-full bg-no-repeat bg-red-900 bg-cover flex flex-col justify-center items-center  gap-10">
+        <div class="w-9/12 bg-no-repeat bg-red-900 bg-cover flex flex-col justify-center items-center  gap-10">
 
 
-            <div class="relative lg:w-[95%] max-sm:w-[100%] sm:w-full h-[1000px]  overflow-hidden">
+            <div class="relative w-[95%] h-[1000px]  overflow-hidden">
 
                 <img id="bg" src="images/stadium_background.webp" alt="background home"
                     class="absolute inset-0 w-full h-full object-cover">
                 <div
-                    class="relative z-10 bottom-10 flex flex-col lg:gap-10 max-sm:gap-2 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                    class="relative z-10 bottom-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
 
                     <!-- ataquant -->
 
-                    <div
-                        class="bg-yellow-300 relative top-2 flex flex-row lg:gap-48 max-md:gap-24 max-sm:gap-0  w-full justify-center">
+                    <div class="flex flex-row gap-36  w-full justify-center">
 
                         <!-- carte 1 -->
                         <div class="w-40 h-52  bg-no-repeat bg-cover ">
                             <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full  object-cover">
+                                    class="absolute inset-0 w-full h-full object-cover">
 
                                 <div
                                     class="relative z-10 flex flex-col items-center justify-center h-full text-white  bg-opacity-100">
                                     <!-- partie image de joueur -->
                                     <div class="w-[90%] h-2/3  ">
                                         <div
-                                            class="relative w-full h-full  overflow-hidden flex flex-col items-center justify-center ">
+                                            class="relative w-full h-32  overflow-hidden flex flex-col items-center justify-center ">
 
                                             <img id="bg" src="https://cdn.sofifa.net/players/158/023/25_120.png"
                                                 alt="background home"
@@ -245,7 +109,7 @@
                             <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full  object-cover">
+                                    class="absolute inset-0 w-full h-full object-cover">
 
                                 <div
                                     class="relative z-10 flex flex-col items-center justify-center h-full text-white  bg-opacity-100">
@@ -302,17 +166,31 @@
                             </div>
                         </div>
 
+                        <!-- carte 3 -->
+                        <div class=" w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
+
+                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
+                                    class="absolute inset-0 w-96 h-full object-cover">
+
+                                <div
+                                    class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                                    test
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- milieu -->
-                    <div class="bg-blue-400 flex flex-row lg:gap-20  w-full justify-center">
+                    <div class="flex flex-row gap-36  w-full justify-center">
 
                         <!-- milieu 1 -->
-                        <div class="relative bottom-10 w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
+                        <div class=" relative bottom-6 w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
+                                    class="absolute inset-0 w-96 h-full object-cover">
 
                                 <div
                                     class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -323,11 +201,11 @@
 
 
                         <!-- milieu 2 -->
-                        <div class=" w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
+                        <div class="w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
+                                    class="absolute inset-0 w-96 h-full object-cover">
 
                                 <div
                                     class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -339,11 +217,11 @@
 
 
                         <!-- milieu 3 -->
-                        <div class=" w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
+                        <div class="relative bottom-6 w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
+                                    class="absolute inset-0 w-96 h-full object-cover">
 
                                 <div
                                     class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -353,33 +231,21 @@
                         </div>
 
 
-                        <!-- milieu 4 -->
-                        <div class="relative bottom-10 w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
-
-                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
-
-                                <div
-                                    class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
-                                    test
-                                </div>
-                            </div>
-                        </div>
+                        
 
 
 
                     </div>
 
-                    <!-- défenseurs -->
-                    <div class="bg-red-900 flex flex-row lg:gap-20 w-full justify-center">
 
-                        <!-- défenseur 1 -->
+                    <div class="flex flex-row gap-20  w-full justify-center">
+
+                        <!-- carte 2 -->
                         <div class="relative top-10 w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
+                            <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
+                                    class="absolute inset-0 w-96 h-full object-cover">
 
                                 <div
                                     class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -389,43 +255,12 @@
                         </div>
 
 
-                        <!-- défenseur 2 -->
-                        <div class=" w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
-
-                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
-
-                                <div
-                                    class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
-                                    test
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <!-- défenseur 3 -->
+                        <!-- carte 2 -->
                         <div class="w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
+                            <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
-
-                                <div
-                                    class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
-                                    test
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- défenseur 4 -->
-                        <div class="relative top-10 w-40 h-52  bg-no-repeat bg-cover ">
-                            <div class="relative lg:w-full lg:h-52 max-sm:w-[100%]  bg-slate-700">
-
-                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full bg-red-200 object-cover">
+                                    class="absolute inset-0 w-96 h-full object-cover">
 
                                 <div
                                     class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -436,28 +271,52 @@
 
 
 
+                        <!-- carte 2 -->
+                        <div class="w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
+
+                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
+                                    class="absolute inset-0 w-96 h-full object-cover">
+
+                                <div
+                                    class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                                    test
+                                </div>
+                            </div>
+                        </div>
 
 
+                        <!-- carte 2 -->
+                        <div class="relative top-10 w-40 h-52 bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
 
+                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
+                                    class="absolute inset-0 w-96 h-full object-cover">
+
+                                <div
+                                    class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                                    test
+                                </div>
+                            </div>
+                        </div>
 
 
 
                     </div>
 
 
-                    <!-- GK -->
-                    <div class="bg-red-200 flex flex-row w-full justify-center">
 
-                        <!-- carte gool  -->
-                        <div
-                            class="relative lg:bottom-10 flex flex-cols justify-center lg:w-40 max-md:w-80  bg-no-repeat bg-cover max-sm:flex max-sm:justify-center max-sm:items-center ">
-                            <div class="relative lg:w-full h-52 max-sm:w-32 sm:w-[50%]  bg-slate-700">
+                    <div class="flex flex-row gap-28  w-full justify-center">
+
+                        <!-- gool -->
+                        <div class="w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
 
                                 <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full  bg-red-300 object-cover">
+                                    class="absolute inset-0 w-full h-full object-cover">
 
                                 <div
-                                    class="relative z-10 flex flex-col items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                                    class="relative z-10 flex flex-col items-center justify-center h-full text-white  bg-opacity-100">
                                     <!-- partie image de joueur -->
                                     <div class="w-[90%] h-2/3  ">
                                         <div
@@ -511,11 +370,104 @@
                             </div>
                         </div>
 
-
                     </div>
-                </div>
 
+
+                </div>
             </div>
+
+        </div>
+        
+        <!-- Formulaire d'ajout des joueurs  -->
+        <div class=" w-3/12 py-2 bg-yellow-400  ">
+
+            <form class="px-2 text-sm">
+                <h2 class="text-2xl text-center mb-4">Formulaire de saisie
+                    les données d'un joueur</h2>
+                <label class="pl-4" for="nomJoueur">Nom du joueur :</label>
+                <input type="text" id="nomJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez le nom du joueur">
+
+                <label class="pl-4" for="photo">Photo de joueur :</label>
+                <input type="url" id="photoJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez la photo du joueur">
+
+                <label class="pl-4" for="position">Position de joueur
+                    :</label>
+                <select name="positionJoueur" id="positionJoueur"
+                    class="w-full p-2 mb-2 border border-gray-300 rounded-md">
+                    <!-- <option value="">position</option> -->
+                    <option value="GK">GK</option>
+                    <option value="CB1">CB1</option>
+                    <option value="CB2">CB2</option>
+                    <option value="RB">RB</option>
+                    <option value="LB">LB</option>
+                    <option value="CM1">CM1</option>
+                    <option value="CM2">CM2</option>
+                    <option value="CM3">CM3</option>
+                    <option value="LW">LW</option>
+                    <option value="RW">RW</option>
+                    <option value="ST">ST</option>
+                </select><br>
+
+                <label class="pl-4" for="nationality">nationalité :</label>
+                <input type="text" id="nationalityJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez nationalité du joueur">
+
+                <label class="pl-4" for="flag">Drapeau :</label>
+                <input type="url" id="flagJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez url de flag de nationalité du joueur">
+
+                <label class="pl-4" for="club">Club :</label>
+                <input type="text" id="clubJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez le nom du club du joueur">
+
+                <label class="pl-4" for="logoClub">logo du Club :</label>
+                <input type="url" id="logoClubJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez url de logo du club du joueur">
+
+                <label class="pl-4" for="rating">rating Joueur :</label>
+                <input type="number" id="ratingJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez rating ">
+
+                <label class="pl-4" for="pace">pace Joueur :</label>
+                <input type="number" id="paceJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez pace">
+
+                <label class="pl-4" for="shooting">shooting Joueur :</label>
+                <input type="number" id="shootingJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez shooting ">
+
+                <label class="pl-4" for="passing">passing Joueur :</label>
+                <input type="number" id="passingJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez passing">
+
+                <label class="pl-4" for="dribbling">dribbling Joueur
+                    :</label>
+                <input type="number" id="dribblingJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez dribbling">
+
+                <label class="pl-4" for="defending">defending Joueur
+                    :</label>
+                <input type="number" id="defendingJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez defending">
+
+                <label class="pl-4" for="physical">physical Joueur :</label>
+                <input type="number" id="physicalJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                    placeholder="Entrez physical">
+
+
+
+                <div class="flex flex-col items-center">
+                    <button type="submit" id="addPlayer"
+                        class="w-1/3  py-2 bg-green-600 text-white rounded-md hover:bg-green-900">
+                        Ajouter joueur
+                    </button>
+                </div>
+            </form>
+
+
+        </div>
     </section>
     <!-- ============================================================================================================================== -->
 
@@ -524,16 +476,15 @@
 
     <!-- ============================================================================================================================== -->
     <!--section pour afficher les joueurs restants (réservistes)-->
-    <section class="bg-blue-400 w-full h-max ">
+    <section class="bg-blue-400 w-full h-64">
 
-        <div
-            class="grid grid-cols-7 md:grid-cols-4 max-md:grid-cols-4 max-md:gap-2 max-sm:grid-cols-2 md:gap-2 sm:pl-2 sm-gap-1 ">
-            <!-- carte 1 -->
+        <div class="flex flex-row ">
+            <!-- carte 2 -->
             <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
+                <div class="relative w-full h-52  overflow-hidden">
 
                     <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
+                        class="absolute inset-0 w-96 h-full object-cover">
 
                     <div
                         class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -544,10 +495,10 @@
 
             <!-- carte 2 -->
             <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
+                <div class="relative w-full h-52  overflow-hidden">
 
                     <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
+                        class="absolute inset-0 w-96 h-full object-cover">
 
                     <div
                         class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -558,10 +509,10 @@
 
             <!-- carte 2 -->
             <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
+                <div class="relative w-full h-52  overflow-hidden">
 
                     <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
+                        class="absolute inset-0 w-96 h-full object-cover">
 
                     <div
                         class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -572,10 +523,10 @@
 
             <!-- carte 2 -->
             <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
+                <div class="relative w-full h-52  overflow-hidden">
 
                     <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
+                        class="absolute inset-0 w-96 h-full object-cover">
 
                     <div
                         class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -586,10 +537,10 @@
 
             <!-- carte 2 -->
             <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
+                <div class="relative w-full h-52  overflow-hidden">
 
                     <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
+                        class="absolute inset-0 w-96 h-full object-cover">
 
                     <div
                         class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -600,10 +551,10 @@
 
             <!-- carte 2 -->
             <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
+                <div class="relative w-full h-52  overflow-hidden">
 
                     <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
+                        class="absolute inset-0 w-96 h-full object-cover">
 
                     <div
                         class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
@@ -612,47 +563,7 @@
                 </div>
             </div>
 
-            <!-- carte 2 -->
-            <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
 
-                    <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
-
-                    <div
-                        class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
-                        test
-                    </div>
-                </div>
-            </div>
-
-            <!-- carte 2 -->
-            <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
-
-                    <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
-
-                    <div
-                        class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
-                        test
-                    </div>
-                </div>
-            </div>
-
-            <!-- carte 2 -->
-            <div class="w-40 h-52 bg-no-repeat bg-cover ">
-                <div class="relative w-full h-52  overflow-hidden ">
-
-                    <img id="bg" src="images/badge_total_rush.webp" alt="background home"
-                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover">
-
-                    <div
-                        class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
-                        test
-                    </div>
-                </div>
-            </div>
 
         </div>
 
