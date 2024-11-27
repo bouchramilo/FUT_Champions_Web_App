@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carte </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+
+    <!-- forme +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div class=" lg:w-3/12 md:w-full max-md:w-full py-2 bg-yellow-400  ">
+
+        <form class="px-2 text-sm">
+            <h2 class="text-2xl text-center mb-4">
+                Formulaire de saisie les données d'un joueur
+            </h2>
+
+            <div
+                class="w-full lg:flex lg:flex-col max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="nomJoueur">Nom du joueur :</label>
+                    <input type="text" id="nomJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                        placeholder="Entrez le nom du joueur" required>
+                </div>
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="photo">Photo de joueur :</label>
+                    <input type="url" id="photoJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                        placeholder="Entrez la photo du joueur" required>
+                </div>
+            </div>
+
+            <div
+                class="w-full lg:flex lg:flex-col max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="flag">Drapeau :</label>
+                    <input type="url" id="flagJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                        placeholder="Entrez url de flag de nationalité du joueur" required>
+
+                </div>
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="nationality">nationalité :</label>
+                    <input type="text" id="nationalityJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                        placeholder="Entrez nationalité du joueur" required>
+
+                </div>
+            </div>
+
+            <div
+                class="w-full lg:flex lg:flex-col max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="club">Club :</label>
+                    <input type="text" id="clubJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                        placeholder="Entrez le nom du club du joueur" required>
+
+                </div>
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="logoClub">logo du Club :</label>
+                    <input type="url" id="logoClubJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                        placeholder="Entrez url de logo du club du joueur" required>
+
+                </div>
+            </div>
+
+            <!-- pour choisir la formilaire de joueur -->
+            <div
+                class="w-full lg:flex lg:flex-col max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="position">Position de joueur
+                        :</label>
+                    <select name="positionJoueur" id="positionJoueur"
+                        class="w-full p-2 mb-2 border border-gray-300 rounded-md" required>
+                        <option value="">position</option>
+                        <option value="GK">GK (Gardien de but)</option>
+                        <option value="CB1">CB1 (Défenseur central 2)</option>
+                        <option value="CB2">CB2 (Défenseur central 1)</option>
+                        <option value="RB">RB (latéral droit)</option>
+                        <option value="LB">LB (latéral gauche)</option>
+                        <option value="CM1">CM1 (miliieu central 1)</option>
+                        <option value="CM2">CM2 (miliieu central 2)</option>
+                        <option value="CM3">CM3 (milieu central 3)</option>
+                        <option value="LW">LW (Ailier gauche)</option>
+                        <option value="RW">RW (Ailier droit)</option>
+                        <option value="ST">ST1 (Attaquant 1)</option>
+                        <option value="ST">ST2 (Attaquant 2)</option>
+                    </select><br>
+                </div>
+                <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                    <label class="pl-4" for="rating">rating Joueur :</label>
+                    <input type="number" id="ratingJoueur" class="w-full p-2 mb-2 border border-gray-300 rounded-md"
+                        placeholder="Entrez rating " required>
+                </div>
+            </div>
+
+            <!-- pour les autres joueurs  -->
+            <div id="formPosition" class="w-full h-full ">
+
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <button type="submit" id="addPlayer"
+                    class="w-2/3  py-2 bg-green-600 text-white rounded-md hover:bg-green-900">
+                    Ajouter joueur
+                </button>
+            </div>
+        </form>
+
+    </div>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <div id="cartes" class="bg-red-200 h-[600px] w-full mt-10">test</div>
+
+
+
+
+
+
+    <!-- carte 1 -->
+    <!-- <div class="w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
+
+                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
+                                    class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-full  object-cover">
+
+                                <div
+                                    class="relative z-10 flex flex-col items-center justify-center h-full text-white  bg-opacity-100"> -->
+    <!-- partie image de joueur -->
+    <!-- <div class="w-[90%] h-2/3  ">
+                                        <div
+                                            class="relative w-full h-full  overflow-hidden flex flex-col items-center justify-center ">
+
+                                            <img id="bg" src="https://cdn.sofifa.net/players/158/023/25_120.png"
+                                                alt="background home"
+                                                class="absolute top-6 left-6 inset-0 w-28 object-cover">
+
+                                            <div
+                                                class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                                <div class="relative top-10 right-12 text-sm font-bold">
+                                                    <p class=" text-center">90</p>
+                                                    <p class="text-[8px] text-center">CF</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="relative bottom-3.5 w-[95%] h-1/3 flex flex-col items-center  ">
+                                        <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
+                                        <div class="flex flex-col w-full justify-center items-center ">
+                                            <table class=" w-[80%] h-full text-[8px]">
+                                                <tr>
+                                                    <th class="text-center font-bold">PAC</th>
+                                                    <th class="text-center font-bold">SHO</th>
+                                                    <th class="text-center font-bold">PAS</th>
+                                                    <th class="text-center font-bold">DRI</th>
+                                                    <th class="text-center font-bold">DEF</th>
+                                                    <th class="text-center font-bold">RHY</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center font-bold">80</td>
+                                                    <td class="text-center font-bold">87</td>
+                                                    <td class="text-center font-bold">90</td>
+                                                    <td class="text-center font-bold">94</td>
+                                                    <td class="text-center font-bold">33</td>
+                                                    <td class="text-center font-bold">64</td>
+                                                </tr>
+                                            </table>
+
+                                        </div>
+                                        <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                                            <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag" class="w-6 h-4">
+                                            <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+
+    <!-- gool -->
+    <!-- <div class="flex flex-row gap-28  w-full justify-center"> -->
+
+    <!-- <div class="w-40 h-52  bg-no-repeat bg-cover ">
+                            <div class="relative w-full h-52  overflow-hidden">
+
+                                <img id="bg" src="images/badge_total_rush.webp" alt="background home"
+                                    class="absolute inset-0 w-full h-full object-cover">
+
+                                <div
+                                    class="relative z-10 flex flex-col items-center justify-center h-full text-white  bg-opacity-100"> -->
+    <!-- partie image de joueur -->
+    <!-- <div class="w-[90%] h-2/3  ">
+                                        <div
+                                            class="relative w-full h-32  overflow-hidden flex flex-col items-center justify-center ">
+
+                                            <img id="bg" src="https://cdn.sofifa.net/players/209/981/25_120.png"
+                                                alt="background home"
+                                                class="absolute top-6 left-6 inset-0 w-28 object-cover">
+
+                                            <div
+                                                class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                                <div class="relative top-10 right-12 text-sm font-bold">
+                                                    <p class=" text-center">84</p>
+                                                    <p class="text-[8px] text-center">GK</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="relative bottom-3.5 w-[95%] h-1/3 flex flex-col items-center  ">
+                                        <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
+                                        <div class="flex flex-col w-full justify-center items-center ">
+                                            <table class=" w-[80%] h-full text-[8px]">
+                                                <tr>
+                                                    <th class="text-center font-bold">DV</th>
+                                                    <th class="text-center font-bold">HDL</th>
+                                                    <th class="text-center font-bold">KCK</th>
+                                                    <th class="text-center font-bold">REF</th>
+                                                    <th class="text-center font-bold">SPD</th>
+                                                    <th class="text-center font-bold">POS</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center font-bold">81</td>
+                                                    <td class="text-center font-bold">82</td>
+                                                    <td class="text-center font-bold">77</td>
+                                                    <td class="text-center font-bold">86</td>
+                                                    <td class="text-center font-bold">38</td>
+                                                    <td class="text-center font-bold">83</td>
+                                                </tr>
+                                            </table>
+
+                                        </div>
+                                        <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                                            <img src="https://cdn.sofifa.net/flags/ma.png" alt="flag" class="w-6 h-4">
+                                            <img src="https://cdn.sofifa.net/meta/team/7011/120.png" alt="logo"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+    <!-- </div> -->
+
+
+    <!-- </div> -->
+
+
+
+
+
+
+</body>
+
+<!-- <script src="js/ajouterJoueur.js"></script> -->
+<script src="js/ajouterJoueur2.js"></script>
+<script src="js/afficherCarteJ.js"></script>
+
+</html>
