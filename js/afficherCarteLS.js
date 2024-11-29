@@ -120,7 +120,7 @@ function afficherCarteTerrain(joueur, DivCarte) {
                           <!-- --------------------------------------------------------------------- -->
                               <div class="w-full h-2/3 flex flex-col items-center ">
                                   <div
-                                      class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
+                                      class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center ">
                                       <div
                                           class="relative z-10 flex flex-col items-start justify-start h-full bg-opacity-100">
                                           <div class="relative top-10 right-12 text-sm font-bold">
@@ -228,7 +228,7 @@ function afficherCarteRempl(joueur) {
     if (joueur.position === "GK") {
         
         RemplacementCartes.innerHTML += `
-                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
                           <div id="cb1" class="w-full h-max  mx-3 text-center font-bold">
                           <!-- --------------------------------------------------------------------- -->
                               <div class="w-full h-2/3 flex flex-col items-center ">
@@ -284,7 +284,7 @@ function afficherCarteRempl(joueur) {
             //   n++;
     } else {
         RemplacementCartes.innerHTML += `
-                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
                           <div id="cb1" class="w-full h-max  mx-3 text-center font-bold">
                           <!-- --------------------------------------------------------------------- -->
                               <div class="w-full h-2/3 flex flex-col items-center ">

@@ -381,7 +381,7 @@ form.addEventListener("submit", function (e) {
       const RemplacementCartes = document.getElementById("RemplacementCartes");
       if (positionJoueur === "GK") {
         RemplacementCartes.innerHTML += `
-                        <button data-id="" class=" card h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="" class=" card h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
                             <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
                             <!-- --------------------------------------------------------------------- -->
                                 <div class="w-full h-2/3 flex flex-col items-center ">
@@ -437,7 +437,7 @@ form.addEventListener("submit", function (e) {
                 
       } else {
         RemplacementCartes.innerHTML += `
-                        <button data-id="" class=" card h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="" class=" card h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
                             <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
                             <!-- --------------------------------------------------------------------- -->
                                 <div class="w-full h-2/3 flex flex-col items-center ">
@@ -508,10 +508,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("gk");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            // alert("pas vide");
+            alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -523,10 +523,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("cb1");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -538,10 +538,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("cb2");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -553,10 +553,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("rb");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -568,10 +568,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("lb");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -583,10 +583,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("cm1");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -598,10 +598,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("cm2");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -613,10 +613,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("cm3");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -628,10 +628,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("rm");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -643,10 +643,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("lm");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -658,10 +658,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("lw");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -673,10 +673,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("rw");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -688,10 +688,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("st1");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
@@ -702,10 +702,10 @@ form.addEventListener("submit", function (e) {
           DIVplayer = document.getElementById("st2");
           if (DIVplayer.innerText === "") {
             afficherCarteTerrain(DIVplayer);
-            alert("vide");
+            // alert("vide");
           } else {
             afficherCarteRemplacement();
-            alert("pas vide");
+            // alert("pas vide");
           }
         } else {
           afficherCarteRemplacement();
