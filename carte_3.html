@@ -13,20 +13,10 @@
 
 <body class="bg-gray-100">
     <!-- ============================================================================================================================== -->
-    <!-- Formulaire caché -->
-    <div id="formContainer" class=" fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
-        
-    </div>
-
-<div class="w-full h-full">
-
-    <!-- ============================================================================================================================== -->
-    <!-- ============================================================================================================================== -->
     <!-- section en haut -->
     <section class="bg-blue-400 w-full h-20 flex flex-col justify-center items-center">
         <select name="formation" id="formation"
             class="lg:w-5/12 md:w-5/12 max-sm:w-11/12 max-md:11/12 p-2 mb-2 border border-gray-300 rounded-md">
-            <option value="">Choisir formation</option>
             <option value="1-4-4-2">4-4-2</option>
             <option value="1-4-3-3">4-3-3</option>
         </select>
@@ -103,7 +93,7 @@
                         <select name="positionJoueur" id="positionJoueur"
                             class="w-full p-2 mb-2 border border-gray-300 rounded-md" required>
                             <option value="">position</option>
-                            <option value="GK" selected>GK (Gardien de but)</option>
+                            <option value="GK">GK (Gardien de but)</option>
                             <option value="CB1">CB1 (Défenseur central 2)</option>
                             <option value="CB2">CB2 (Défenseur central 1)</option>
                             <option value="RB">RB (Latéral droit)</option>
@@ -260,74 +250,122 @@
                     class="relative top-1 bottom-1 z-10 flex flex-col lg:gap-1 md:gap-6 max-md:gap-4 max-sm:gap-2 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
 
                     <!-- attaquants +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                    <div id="attaquants" class="flex flex-row w-full place-items-center justify-center lg:gap-20 ">
+                    <div class="flex flex-row w-full place-items-center justify-center lg:gap-20 ">
                         <!-- carte 1  -->
-                        <!-- <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="lw" class="w-full h-max  mx-3 text-white text-center font-bold">
-                                
-
-                                
-                            </div>
-                        </div> -->
-                        <!-- carte 2 -->
-                        <!-- <div
+                        <div 
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                                <!-- --------------------------------------------------------------------- -->
                                 
 
-                                
+                                <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div> -->
-                        <!-- carte 3 -->
-                        <!-- <div
+                        </div>
+                        <!-- carte 2 -->
+                        <div 
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="rw" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="st2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                                <!-- --------------------------------------------------------------------- -->
                                 
 
-                                
+                                <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div> -->
+                        </div>
+                        
                     </div>
 
                     <!-- milieux +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                    <div id="milieux" class="flex flex-row w-full place-items-center justify-center lg:gap-20 ">
+                    <div class="flex flex-row w-full place-items-center justify-center lg:gap-20 ">
                         <!-- carte 1  -->
-                        <!-- <div
+                        <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="cm1" class="w-full h-max  mx-3 text-white text-center font-bold">
-                                
-
-                                
+                            <div id="lm" class="w-full h-max  mx-3 text-white text-center font-bold">
+                                <!-- --------------------------------------------------------------------- -->
+                               
+                                <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div> -->
+                        </div>
                         <!-- carte 2 -->
-                        <!-- <div
+                        <div
+                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                            <div  id="cm1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                                <!-- --------------------------------------------------------------------- -->
+                            
+                                <!-- --------------------------------------------------------------------- -->
+                            </div>
+                        </div>
+                        <!-- carte 3 -->
+                        <div 
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cm2" class="w-full h-max  mx-3 text-white text-center font-bold">
-                                
-
-                                
+                                <!-- --------------------------------------------------------------------- -->
+                               
+                                <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div> -->
-                        <!-- carte 3 -->
-                        <!-- <div
+                        </div>
+                        <!-- carte 4 -->
+                        <div 
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="cm3" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="rm" class="w-full h-max  mx-3 text-white text-center font-bold">
+                                <!-- --------------------------------------------------------------------- -->
                                 
-
-                                
+                                <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
                     <!-- défenseurs +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                    <div id="defenseurs" class="flex flex-row w-full lg:gap-4 justify-center hidden">
+                    <div class="flex flex-row w-full lg:gap-4 justify-center ">
                         <!-- carte 1 -->
                         <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="lb" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
+                                <!-- <div clas 
+                                    <div
+                                        class="h-32 w-4/5 bg-[url('https://cdn.sofifa.net/players/158/023/25_120.png')]  bg-cover  bg-center flex justify-center items-center">
+                                        <div
+                                            class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                            <div class="relative top-10 right-12 text-sm font-bold">
+                                                <p class=" text-center">90</p>
+                                                <p class="text-[8px] text-center">CF</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
+                                    <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
+                                    <div class="flex flex-col w-full justify-center items-center ">
+                                        <table class=" w-[80%] h-full text-[8px]">
+                                            <tr>
+                                                <th class="text-center font-bold">PAC</th>
+                                                <th class="text-center font-bold">SHO</th>
+                                                <th class="text-center font-bold">PAS</th>
+                                                <th class="text-center font-bold">DRI</th>
+                                                <th class="text-center font-bold">DEF</th>
+                                                <th class="text-center font-bold">RHY</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center font-bold">80</td>
+                                                <td class="text-center font-bold">87</td>
+                                                <td class="text-center font-bold">90</td>
+                                                <td class="text-center font-bold">94</td>
+                                                <td class="text-center font-bold">33</td>
+                                                <td class="text-center font-bold">64</td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                    <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                                        <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag" class="w-6 h-4">
+                                        <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo"
+                                            class="w-4 h-4">
+                                    </div>
+                                </div> -->
+
+
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
@@ -337,34 +375,168 @@
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
+                                <!-- <div class="w-full h-2/3 flex flex-col items-center ">
+                                    <div
+                                        class="h-32 w-4/5 bg-[url('https://cdn.sofifa.net/players/158/023/25_120.png')]  bg-cover  bg-center flex justify-center items-center">
+                                        <div
+                                            class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                            <div class="relative top-10 right-12 text-sm font-bold">
+                                                <p class=" text-center">90</p>
+                                                <p class="text-[8px] text-center">CF</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
+                                    <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
+                                    <div class="flex flex-col w-full justify-center items-center ">
+                                        <table class=" w-[80%] h-full text-[8px]">
+                                            <tr>
+                                                <th class="text-center font-bold">PAC</th>
+                                                <th class="text-center font-bold">SHO</th>
+                                                <th class="text-center font-bold">PAS</th>
+                                                <th class="text-center font-bold">DRI</th>
+                                                <th class="text-center font-bold">DEF</th>
+                                                <th class="text-center font-bold">RHY</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center font-bold">80</td>
+                                                <td class="text-center font-bold">87</td>
+                                                <td class="text-center font-bold">90</td>
+                                                <td class="text-center font-bold">94</td>
+                                                <td class="text-center font-bold">33</td>
+                                                <td class="text-center font-bold">64</td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                    <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                                        <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag" class="w-6 h-4">
+                                        <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo"
+                                            class="w-4 h-4">
+                                    </div>
+                                </div> -->
+
 
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
                         </div>
                         <!-- carte 3 -->
-                        <div
+                        <div 
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cb2" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
+                                <!-- <div class="w-full h-2/3 flex flex-col items-center ">
+                                    <div
+                                        class="h-32 w-4/5 bg-[url('https://cdn.sofifa.net/players/158/023/25_120.png')]  bg-cover  bg-center flex justify-center items-center">
+                                        <div
+                                            class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                            <div class="relative top-10 right-12 text-sm font-bold">
+                                                <p class=" text-center">90</p>
+                                                <p class="text-[8px] text-center">CF</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
+                                    <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
+                                    <div class="flex flex-col w-full justify-center items-center ">
+                                        <table class=" w-[80%] h-full text-[8px]">
+                                            <tr>
+                                                <th class="text-center font-bold">PAC</th>
+                                                <th class="text-center font-bold">SHO</th>
+                                                <th class="text-center font-bold">PAS</th>
+                                                <th class="text-center font-bold">DRI</th>
+                                                <th class="text-center font-bold">DEF</th>
+                                                <th class="text-center font-bold">RHY</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center font-bold">80</td>
+                                                <td class="text-center font-bold">87</td>
+                                                <td class="text-center font-bold">90</td>
+                                                <td class="text-center font-bold">94</td>
+                                                <td class="text-center font-bold">33</td>
+                                                <td class="text-center font-bold">64</td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                    <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                                        <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag" class="w-6 h-4">
+                                        <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo"
+                                            class="w-4 h-4">
+                                    </div>
+                                </div> -->
+
+
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
                         </div>
                         <!-- carte 4 -->
-                        <button data-id="1"
+                        <div 
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="rb" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
+                                <!-- <div class="w-full h-2/3 flex flex-col items-center ">
+                                    <div
+                                        class="h-32 w-4/5 bg-[url('https://cdn.sofifa.net/players/158/023/25_120.png')]  bg-cover  bg-center flex justify-center items-center">
+                                        <div
+                                            class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                            <div class="relative top-10 right-12 text-sm font-bold">
+                                                <p class=" text-center">90</p>
+                                                <p class="text-[8px] text-center">CF</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
+                                    <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
+                                    <div class="flex flex-col w-full justify-center items-center ">
+                                        <table class=" w-[80%] h-full text-[8px]">
+                                            <tr>
+                                                <th class="text-center font-bold">PAC</th>
+                                                <th class="text-center font-bold">SHO</th>
+                                                <th class="text-center font-bold">PAS</th>
+                                                <th class="text-center font-bold">DRI</th>
+                                                <th class="text-center font-bold">DEF</th>
+                                                <th class="text-center font-bold">RHY</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center font-bold">80</td>
+                                                <td class="text-center font-bold">87</td>
+                                                <td class="text-center font-bold">90</td>
+                                                <td class="text-center font-bold">94</td>
+                                                <td class="text-center font-bold">33</td>
+                                                <td class="text-center font-bold">64</td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                    <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                                        <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag" class="w-6 h-4">
+                                        <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo"
+                                            class="w-4 h-4">
+                                    </div>
+                                </div> -->
+
+
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </button>
+                        </div>
                     </div>
 
                     <!-- Gardien +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                    <div id="gardien" class="flex flex-row w-full place-items-center justify-center lg:gap-4 hidden">
-                        <button data-id="2"
+                    <div class="flex flex-row w-full place-items-center justify-center lg:gap-4 ">
+                        <div 
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="gk" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
@@ -416,7 +588,7 @@
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </button>
+                        </div>
                     </div>
 
                 </div>
@@ -428,129 +600,54 @@
     </section>
     <!-- ============================================================================================================================== -->
 
+
+
+
     <!-- ============================================================================================================================== -->
     <!--section pour afficher les joueurs restants (réservistes)-->
-    <section class="bg-blue-400 w-full h-max min-h-56  ">
-        <h2 class="text-2xl text-center mb-4">Les Remplacements :</h2>
+    <section class="bg-blue-400 w-full h-max ">
+
         <div id="RemplacementCartes"
-            class="grid lg:grid-cols-7 md:grid-cols-4 max-md:grid-cols-4 max-md:gap-2 lg:gap-2 md:gap-2 max-sm:grid-cols-2  max-sm:place-items-center">
+            class="grid lg:grid-cols-7 md:grid-cols-4 max-md:grid-cols-4 max-md:gap-2 md:gap-2 max-sm:grid-cols-2  max-sm:place-items-center">
 
-            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- <div  class="bg-red-200 mt-4">test</div> -->
 
-            <!-- --------------------------------------------------------------------- -->
-            <!-- <div
-                class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                <div id="cb2" class="w-full h-max  mx-3 text-white text-center font-bold">
 
-                    <div class="w-full h-2/3 flex flex-col items-center ">
-                        <div
-                            class="h-32 w-4/5 bg-[url('https://cdn.sofifa.net/players/158/023/25_120.png')]  bg-cover  bg-center flex justify-center items-center">
-                            <div
-                                class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
-                                <div class="relative top-10 right-12 text-sm font-bold">
-                                    <p class=" text-center">90</p>
-                                    <p class="text-[8px] text-center">CF</p>
-                                </div>
+            <!-- carte 2 -->
+            <!-- <div class="w-40 h-52 bg-no-repeat bg-cover flex justify-center items-center">
+                <div class="relative w-full h-52 max-sm:w-36  overflow-hidden ">
 
-                            </div>
-                        </div>
+                    <img id="bg" src="images/badge_total_rush.webp" alt="background home"
+                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover ">
 
+                    <div
+                        class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                        test
                     </div>
-                    <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
-                        <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
-                        <div class="flex flex-col w-full justify-center items-center ">
-                            <table class=" w-[80%] h-full text-[8px]">
-                                <tr>
-                                    <th class="text-center font-bold">PAC</th>
-                                    <th class="text-center font-bold">SHO</th>
-                                    <th class="text-center font-bold">PAS</th>
-                                    <th class="text-center font-bold">DRI</th>
-                                    <th class="text-center font-bold">DEF</th>
-                                    <th class="text-center font-bold">RHY</th>
-                                </tr>
-                                <tr>
-                                    <td class="text-center font-bold">80</td>
-                                    <td class="text-center font-bold">87</td>
-                                    <td class="text-center font-bold">90</td>
-                                    <td class="text-center font-bold">94</td>
-                                    <td class="text-center font-bold">33</td>
-                                    <td class="text-center font-bold">64</td>
-                                </tr>
-                            </table>
-
-                        </div>
-                        <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
-                            <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag" class="w-6 h-4">
-                            <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo" class="w-4 h-4">
-                        </div>
-                    </div>
-
-
-                </div>
-            </div> -->
-            <!-- --------------------------------------------------------------------- -->
-
-            <!-- --------------------------------------------------------------------- -->
-            <!-- <div
-                class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                <div id="cb2" class="w-full h-max  mx-3 text-white text-center font-bold">
-
-                    <div class="w-full h-2/3 flex flex-col items-center ">
-                        <div
-                            class="h-32 w-4/5 bg-[url('https://cdn.sofifa.net/players/158/023/25_120.png')]  bg-cover  bg-center flex justify-center items-center">
-                            <div
-                                class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
-                                <div class="relative top-10 right-12 text-sm font-bold">
-                                    <p class=" text-center">90</p>
-                                    <p class="text-[8px] text-center">CF</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
-                        <p class=" text-[12px] font-bold text-center">Nom de joueur</p>
-                        <div class="flex flex-col w-full justify-center items-center ">
-                            <table class=" w-[80%] h-full text-[8px]">
-                                <tr>
-                                    <th class="text-center font-bold">PAC</th>
-                                    <th class="text-center font-bold">SHO</th>
-                                    <th class="text-center font-bold">PAS</th>
-                                    <th class="text-center font-bold">DRI</th>
-                                    <th class="text-center font-bold">DEF</th>
-                                    <th class="text-center font-bold">RHY</th>
-                                </tr>
-                                <tr>
-                                    <td class="text-center font-bold">80</td>
-                                    <td class="text-center font-bold">87</td>
-                                    <td class="text-center font-bold">90</td>
-                                    <td class="text-center font-bold">94</td>
-                                    <td class="text-center font-bold">33</td>
-                                    <td class="text-center font-bold">64</td>
-                                </tr>
-                            </table>
-
-                        </div>
-                        <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
-                            <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag" class="w-6 h-4">
-                            <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo" class="w-4 h-4">
-                        </div>
-                    </div>
-
-
                 </div>
             </div> -->
 
-            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- carte 2 -->
+            <!-- <div class="w-40 h-52 bg-no-repeat bg-cover flex justify-center items-center">
+                <div class="relative w-full h-52 max-sm:w-36  overflow-hidden ">
+
+                    <img id="bg" src="images/badge_total_rush.webp" alt="background home"
+                        class="absolute inset-0 lg:w-96 lg:h-full max-sm:w-36 max-sm:h-full object-cover ">
+
+                    <div
+                        class="relative z-10 flex flex-col gap-10 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                        test
+                    </div>
+                </div>
+            </div> -->
+
+
 
         </div>
 
     </section>
     <!-- ============================================================================================================================== -->
 
-
-</div>
 
 
 
@@ -560,11 +657,6 @@
 <script src="js/ajouterJoueur2.js"></script>
 <!-- <script src="js/afficherCarteJ.js"></script> -->
 <script src="js/carteTerrain2.js"></script>
-<script src="js/switchFormation.js"></script>
-<script src="js/showCarte.js"></script>
-<script src="js/afficherCarteLS.js"></script>
-<!-- <script src="js/removeTapFromLS.js"></script> -->
-
 
 
 
