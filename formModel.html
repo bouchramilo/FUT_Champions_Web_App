@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Dynamique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Formulaire caché -->
+    <div id="formContainer" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+        
+    </div>
+
+    <!-- Bouton pour afficher le formulaire -->
+    <!-- <button id="showFormButton" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">
+        Afficher le formulaire
+    </button> -->
+
+    <!-- carte 1  -->
+    <button  data-id="1" 
+    class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+    <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
+        <!-- --------------------------------------------------------------------- -->
+        <div class="w-full h-2/3 flex flex-col items-center ">
+            <div
+                class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
+                <div
+                    class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                    <div class="relative top-10 right-12 text-sm font-bold">
+                        <p class=" text-center">${joueur.rating}</p>
+                        <p class="text-[8px] text-center">${joueur.position}</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
+            <p class=" text-[12px] font-bold text-center">${joueur.name}</p>
+            <div class="flex flex-col w-full justify-center items-center ">
+                <table class=" w-[80%] h-full text-[8px]">
+                    <tr>
+                        <th class="text-center font-bold">DV</th>
+                        <th class="text-center font-bold">HDL</th>
+                        <th class="text-center font-bold">KCK</th>
+                        <th class="text-center font-bold">REF</th>
+                        <th class="text-center font-bold">SPD</th>
+                        <th class="text-center font-bold">POS</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center font-bold">${joueur.diving}</td>
+                        <td class="text-center font-bold">${joueur.handling}</td>
+                        <td class="text-center font-bold">${joueur.kicking}</td>
+                        <td class="text-center font-bold">${joueur.reflexes}</td>
+                        <td class="text-center font-bold">${joueur.speed}</td>
+                        <td class="text-center font-bold">${joueur.positioning}</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                <img src=${joueur.flag} alt="flag" class="w-6 h-4">
+                <img src=${joueur.logo} alt="logo"
+                    class="w-4 h-4">
+            </div>
+        </div>
+
+        <!-- --------------------------------------------------------------------- -->
+    </div>
+</button>
+    <button  data-id="1" 
+    class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+    <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
+        <!-- --------------------------------------------------------------------- -->
+        <div class="w-full h-2/3 flex flex-col items-center ">
+            <div
+                class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
+                <div
+                    class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                    <div class="relative top-10 right-12 text-sm font-bold">
+                        <p id="rt" class=" text-center">90</p>
+                        <p id="pst" class="text-[8px] text-center">GK</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class=" w-[95%] h-1/3 flex flex-col items-center  ">
+            <p id="nm" class=" text-[12px] font-bold text-center">bono</p>
+            <div class="flex flex-col w-full justify-center items-center ">
+                <table class=" w-[80%] h-full text-[8px]">
+                    <tr>
+                        <th class="text-center font-bold">DV</th>
+                        <th class="text-center font-bold">HDL</th>
+                        <th class="text-center font-bold">KCK</th>
+                        <th class="text-center font-bold">REF</th>
+                        <th class="text-center font-bold">SPD</th>
+                        <th class="text-center font-bold">POS</th>
+                    </tr>
+                    <tr>
+                        <td id="dv" class="text-center font-bold">88</td>
+                        <td id="hdl" class="text-center font-bold">88</td>
+                        <td id="kck" class="text-center font-bold">88</td>
+                        <td id="ref" class="text-center font-bold">88</td>
+                        <td id="spd" class="text-center font-bold">88</td>
+                        <td id="pos" class="text-center font-bold">88</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class=" flex flex-row justify-center items-center gap-4 w-[90%]">
+                <img id="flg" src="xx" alt="flag" class="w-6 h-4">
+                <img id="log" src="yy" alt="logo"
+                    class="w-4 h-4">
+            </div>
+        </div>
+
+        <!-- --------------------------------------------------------------------- -->
+    </div>
+</button>
+
+
+
+
+
+    
+
+    <!-- <script>
+        // Récupérer le bouton et le formulaire
+        const showFormButton = document.getElementById('showFormButton');
+        const formContainer = document.getElementById('formContainer');
+
+        
+
+        // Afficher ou masquer le formulaire
+        showFormButton.addEventListener('click', () => {
+            formContainer.classList.toggle('hidden');
+            formContainer.innerHTML = `
+
+               <div class="bg-white p-4 rounded-lg shadow-lg w-96 flex flex-col gap-2">
+            <div class="w-full flex flex-row ">
+                <h2 class=" w-11/12 text-2xl mb-4 text-[18px] text-center">nom de joueur</h2>
+                <button id="btFfermer" class="w-1/12 items-end "><img src="images/btnFermer.png" alt="fermer" class="border rounded-full hover:bg-red-300 hover:shadow-md hover:shadow-gray-600"></button>
+            </div>
+            <div class="w-full h-1/2 flex flex-row gap-2 ">
+                <div class="h-full w-1/3 flex flex-col gap-2">
+                    <img src="https://cdn.sofifa.net/players/209/981/25_120.png" alt="photo de Joueur" class="border rounded-full bg-green-100">
+                    <div class="flex flex-row justify-center gap-2">
+                        <img src="https://cdn.sofifa.net/flags/ma.png" alt="flag" class="">
+                        <img src="https://cdn.sofifa.net/meta/team/7011/120.png" alt="logo" class="w-1/4">
+                    </div>
+                </div>
+                <div class="h-full w-2/3 ">
+                    <table class=" w-[80%] h-full text-[12px]">
+                        <tr>
+                            <th class="text-center font-bold">Position</th>
+                            <td class="text-center font-bold">GK</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center font-bold">Rating</th>
+                            <td class="text-center font-bold">88</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center font-bold">Diving</th>
+                            <td class="text-center font-bold">81</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center font-bold">Handling</th>
+                            <td class="text-center font-bold">82</td>
+                            </tr>
+                        <tr>
+                            <th class="text-center font-bold">Kicking</th>
+                            <td class="text-center font-bold">77</td>
+                            </tr>
+                        <tr>
+                            <th class="text-center font-bold">Reflexes</th>
+                            <td class="text-center font-bold">86</td>
+                            </tr>
+                        <tr>
+                            <th class="text-center font-bold">Speed</th>
+                            <td class="text-center font-bold">38</td>
+                            </tr>
+                        <tr>
+                            <th class="text-center font-bold">Positioning</th>
+                            <td class="text-center font-bold">83</td>
+                            </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="w-full h-1/2 flex gap-2 px-2 text-[14px]">
+                <button type="button" class="w-1/2 h-10 bg-green-600 hover:shadow-md hover:shadow-gray-600 hover:bg-green-500  border-none rounded-md">Remplacer</button>
+                <button type="button" class="w-1/2 h-10 bg-red-400 hover:shadow-md hover:shadow-gray-600 hover:bg-red-300  border-none rounded-md">Supprimer</button>
+            </div>
+        </div>
+            
+            
+                `;
+
+                const btFfermer = document.getElementById("btFfermer");
+
+                btFfermer.addEventListener('click', () => {
+                    formContainer.classList.toggle('hidden');
+        });
+
+        }); 
+    </script>-->
+</body>
+
+<script src="js/showCarte.js"></script>
+
+</html>
