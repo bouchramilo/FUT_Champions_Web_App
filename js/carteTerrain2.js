@@ -1,6 +1,6 @@
 // Sélection du formulaire par son tag <form>
 const form = document.querySelector("form");
-
+// let n = 12 ;
 function validNumber(valeurInput) {
   let valueInput = parseInt(valeurInput);
   // alert("typeof valueInput" + typeof valueInput);
@@ -261,11 +261,15 @@ form.addEventListener("submit", function (e) {
     // if (positionJoueur === "GK") {
     //     let DIVGK = document.getElementById("gk");
 
+
+
     function afficherCarteTerrain(DivCarte) {
       if (positionJoueur === "GK") {
+
+        // DivCarte.className = "card";
         DivCarte.innerHTML = `
                             <!-- --------------------------------------------------------------------- -->
-                                <div class="w-full h-2/3 flex flex-col items-center ">
+                                <div class="w-full h-2/3 flex flex-col items-center">
                                     <div
                                         class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
                                         <div
@@ -370,12 +374,14 @@ form.addEventListener("submit", function (e) {
       localStorage.setItem("playersTrrn", JSON.stringify(playersTrrn));
     }
 
+    // let n = 12 ;
+
     function afficherCarteRemplacement() {
       alert("Ajout la carte au remplacement !!!!");
       const RemplacementCartes = document.getElementById("RemplacementCartes");
       if (positionJoueur === "GK") {
         RemplacementCartes.innerHTML += `
-                        <div class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="" class=" card h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
                             <!-- --------------------------------------------------------------------- -->
                                 <div class="w-full h-2/3 flex flex-col items-center ">
@@ -426,11 +432,12 @@ form.addEventListener("submit", function (e) {
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                 `;
+                
       } else {
         RemplacementCartes.innerHTML += `
-                        <div class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="" class=" card h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
                             <!-- --------------------------------------------------------------------- -->
                                 <div class="w-full h-2/3 flex flex-col items-center ">
@@ -483,8 +490,9 @@ form.addEventListener("submit", function (e) {
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                 `;
+                
       }
 
       playersRemp.push(joueur);

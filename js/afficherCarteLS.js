@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedCard = JSON.parse(localStorage.getItem("playersRemp")) || [] ;
 
     savedCard.forEach(playerRempl => {
-        afficherCarteRemplacement(playerRempl);
+        afficherCarteRempl(playerRempl);
         
     });
     
-    
+    // pour les joueur de terrain
     const savedCardTrrn = JSON.parse(localStorage.getItem("playersTrrn")) || [] ;
 
     savedCardTrrn.forEach(playerTrrn => {
@@ -115,13 +115,14 @@ function afficherCarteTerrain(joueur, DivCarte) {
     
     
     if (joueur.position === "GK") {
+        DivCarte.classList = "card";
       DivCarte.innerHTML = `
                           <!-- --------------------------------------------------------------------- -->
                               <div class="w-full h-2/3 flex flex-col items-center ">
                                   <div
                                       class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
                                       <div
-                                          class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                          class="relative z-10 flex flex-col items-start justify-start h-full bg-opacity-100">
                                           <div class="relative top-10 right-12 text-sm font-bold">
                                               <p class=" text-center">${joueur.rating}</p>
                                               <p class="text-[8px] text-center">${joueur.position}</p>
@@ -166,13 +167,15 @@ function afficherCarteTerrain(joueur, DivCarte) {
                               <!-- --------------------------------------------------------------------- -->
               `;
     } else {
+        DivCarte.classList = "card";
+
       DivCarte.innerHTML = `
                           <!-- --------------------------------------------------------------------- -->
                               <div class="w-full h-2/3 flex flex-col items-center ">
                                   <div
                                       class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
                                       <div
-                                          class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                          class="relative z-10 flex flex-col items-start justify-start h-full bg-opacity-100">
                                           <div class="relative top-10 right-12 text-sm font-bold">
                                               <p class=" text-center">${joueur.rating}</p>
                                               <p class="text-[8px] text-center">${joueur.position}</p>
@@ -219,23 +222,24 @@ function afficherCarteTerrain(joueur, DivCarte) {
     }
 }
 
-
-function afficherCarteRemplacement(joueur) {
+function afficherCarteRempl(joueur) {
     const RemplacementCartes = document.getElementById("RemplacementCartes");
+    // let n = 12 ;
     if (joueur.position === "GK") {
-      RemplacementCartes.innerHTML += `
-                      <div class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                          <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
+        
+        RemplacementCartes.innerHTML += `
+                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                          <div id="cb1" class="w-full h-max  mx-3 text-center font-bold">
                           <!-- --------------------------------------------------------------------- -->
                               <div class="w-full h-2/3 flex flex-col items-center ">
                                   <div
                                       class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
                                       <div
-                                          class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                          class="relative z-10 flex flex-col items-start justify-start h-full bg-opacity-100">
                                           <div class="relative top-10 right-12 text-sm font-bold">
                                               <p class=" text-center">${joueur.rating}</p>
                                               <p class="text-[8px] text-center">${joueur.position}</p>
-                                          </div>
+                                           </div>
 
                                       </div>
                                   </div>
@@ -275,18 +279,19 @@ function afficherCarteRemplacement(joueur) {
 
                               <!-- --------------------------------------------------------------------- -->
                           </div>
-                      </div>
+                      </button>
               `;
+            //   n++;
     } else {
-      RemplacementCartes.innerHTML += `
-                      <div class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                          <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
+        RemplacementCartes.innerHTML += `
+                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                          <div id="cb1" class="w-full h-max  mx-3 text-center font-bold">
                           <!-- --------------------------------------------------------------------- -->
                               <div class="w-full h-2/3 flex flex-col items-center ">
                                   <div
                                       class="h-32 w-4/5 bg-[url('${joueur.photo}')]  bg-cover  bg-center flex justify-center items-center">
                                       <div
-                                          class="relative z-10 flex flex-col items-start justify-start h-full text-white  bg-opacity-100">
+                                          class="relative z-10 flex flex-col items-start justify-start h-full bg-opacity-100">
                                           <div class="relative top-10 right-12 text-sm font-bold">
                                               <p class=" text-center">${joueur.rating}</p>
                                               <p class="text-[8px] text-center">${joueur.position}</p>
@@ -332,8 +337,9 @@ function afficherCarteRemplacement(joueur) {
 
                               <!-- --------------------------------------------------------------------- -->
                           </div>
-                      </div>
+                      </button>
               `;
+            //   n++;
     }
 
     

@@ -20,102 +20,102 @@ SwFormation.addEventListener("change", () => {
         DIVattaquant.innerHTML = `
 
                     <!-- carte 1  -->
-                        <div 
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="11"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                 
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 2 -->
-                        <div 
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="10"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="st2" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                 
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
 
             `;
 
         DIVmilieux.innerHTML = `
 
                     <!-- carte 1  -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="9"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="lm" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 2 -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="8"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div  id="cm1" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                             
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 3 -->
-                        <div 
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="7"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cm2" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 4 -->
-                        <div 
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="6"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="rm" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
 
             `;
         
     }
     else if( typeFormation === "1-4-3-3" ){
-        alert("formation : 1-4-3-3 ");
+        // alert("formation : 1-4-3-3 ");
 
         DIVattaquant.innerHTML = `
 
                     <!-- carte 1  -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="11"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="lw" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 2 -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="10"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 3 -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="9"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="rw" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
         
             `;
 
@@ -123,32 +123,32 @@ SwFormation.addEventListener("change", () => {
         DIVmilieux.innerHTML = `
 
                     <!-- carte 1  -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="8"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cm1" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 2 -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="7"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cm2" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                     <!-- carte 3 -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                        <button data-id="6"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
                             <div id="cm3" class="w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
 
             `;
 
