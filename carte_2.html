@@ -37,7 +37,7 @@
 
     <!-- ============================================================================================================================== -->
     <!-- section principal  -->
-    <section class="flex lg:flex-row md:flex-col max-md:flex-col max-md w-full h-full">
+    <section id="sectionPrincipal" class="flex lg:flex-row md:flex-col max-md:flex-col max-md w-full h-full">
 
         <!-- forme +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
         <div class=" lg:w-3/12 md:w-full max-md:w-full py-2  ">
@@ -103,7 +103,7 @@
                         <select name="positionJoueur" id="positionJoueur"
                             class="w-full p-2 mb-2 border border-gray-300 rounded-md" required>
                             <option value="">position</option>
-                            <option value="GK" selected>GK (Gardien de but)</option>
+                            <option value="GK">GK (Gardien de but)</option>
                             <option value="CB1">CB1 (Défenseur central 2)</option>
                             <option value="CB2">CB2 (Défenseur central 1)</option>
                             <option value="RB">RB (Latéral droit)</option>
@@ -256,15 +256,15 @@
 
                 <img id="bg" src="images/stadium_background.webp" alt="background home"
                     class="absolute inset-0 w-full h-full object-cover">
-                <div
-                    class="relative top-1 bottom-1 z-10 flex flex-col lg:gap-1 md:gap-6 max-md:gap-4 max-sm:gap-2 items-center justify-center h-full text-white bg-transparent bg-opacity-100">
+                <div id="playersCourent"
+                    class="playersCourent relative top-1 bottom-1 z-10 flex flex-col lg:gap-1 md:gap-6 max-md:gap-4 max-sm:gap-2 items-center justify-center h-full bg-transparent bg-opacity-100">
 
                     <!-- attaquants +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
                     <div id="attaquants" class="flex flex-row w-full place-items-center justify-center lg:gap-20 ">
                         <!-- carte 1  -->
                         <!-- <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="lw" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="lw" class="w-full h-max  mx-3 text-center font-bold">
                                 
 
                                 
@@ -273,7 +273,7 @@
                         <!-- carte 2 -->
                         <!-- <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="st1" class="w-full h-max  mx-3 text-center font-bold">
                                 
 
                                 
@@ -282,7 +282,7 @@
                         <!-- carte 3 -->
                         <!-- <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="rw" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="rw" class="w-full h-max  mx-3 text-center font-bold">
                                 
 
                                 
@@ -295,7 +295,7 @@
                         <!-- carte 1  -->
                         <!-- <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="cm1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="cm1" class="w-full h-max  mx-3 text-center font-bold">
                                 
 
                                 
@@ -304,7 +304,7 @@
                         <!-- carte 2 -->
                         <!-- <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="cm2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="cm2" class="w-full h-max  mx-3 text-center font-bold">
                                 
 
                                 
@@ -313,7 +313,7 @@
                         <!-- carte 3 -->
                         <!-- <div
                             class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="cm3" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            <div id="cm3" class="w-full h-max  mx-3 text-center font-bold">
                                 
 
                                 
@@ -324,37 +324,37 @@
                     <!-- défenseurs +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
                     <div id="defenseurs" class="flex flex-row w-full lg:gap-4 justify-center hidden">
                         <!-- carte 1 -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="lb" class="w-full h-max  mx-3 text-white text-center font-bold">
+                        <button data-id="5"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                            <div id="lb" class="w-full h-max  mx-3 text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                         <!-- carte 2  -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="cb1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                        <button data-id="4"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                            <div id="cb1" class="w-full h-max  mx-3 text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                         <!-- carte 3 -->
-                        <div
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="cb2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                        <button data-id="3"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                            <div id="cb2" class="w-full h-max  mx-3 text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
                             </div>
-                        </div>
+                        </button>
                         <!-- carte 4 -->
-                        <button data-id="1"
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="rb" class="w-full h-max  mx-3 text-white text-center font-bold">
+                        <button data-id="2"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                            <div id="rb" class="w-full h-max  mx-3 text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
@@ -363,10 +363,10 @@
                     </div>
 
                     <!-- Gardien +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                    <div id="gardien" class="flex flex-row w-full place-items-center justify-center lg:gap-4 hidden">
-                        <button data-id="2"
-                            class="h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                            <div id="gk" class="w-full h-max  mx-3 text-white text-center font-bold">
+                    <div id="gardien" class="relative bottom-6 flex flex-row w-full place-items-center justify-center lg:gap-4 hidden">
+                        <button data-id="1"
+                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
+                            <div id="gk" class="w-full h-max  mx-3 text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                 <!-- <div class="w-full h-2/3 flex flex-col items-center ">
                                     <div
@@ -430,17 +430,17 @@
 
     <!-- ============================================================================================================================== -->
     <!--section pour afficher les joueurs restants (réservistes)-->
-    <section class="bg-blue-400 w-full h-max min-h-56  ">
+    <section class="bg-blue-400 w-full h-max min-h-56 playersRempl ">
         <h2 class="text-2xl text-center mb-4">Les Remplacements :</h2>
-        <div id="RemplacementCartes"
-            class="grid lg:grid-cols-7 md:grid-cols-4 max-md:grid-cols-4 max-md:gap-2 lg:gap-2 md:gap-2 max-sm:grid-cols-2  max-sm:place-items-center">
+        <div id="RemplacementCartes" 
+            class="playersRempl grid lg:grid-cols-7 md:grid-cols-4 max-md:grid-cols-4 max-md:gap-2 lg:gap-2 md:gap-2 max-sm:grid-cols-2  max-sm:place-items-center">
 
             <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
             <!-- --------------------------------------------------------------------- -->
             <!-- <div
                 class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                <div id="cb2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                <div id="cb2" class="w-full h-max  mx-3 text-center font-bold">
 
                     <div class="w-full h-2/3 flex flex-col items-center ">
                         <div
@@ -493,7 +493,7 @@
             <!-- --------------------------------------------------------------------- -->
             <!-- <div
                 class="h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center">
-                <div id="cb2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                <div id="cb2" class="w-full h-max  mx-3 text-center font-bold">
 
                     <div class="w-full h-2/3 flex flex-col items-center ">
                         <div
@@ -561,9 +561,11 @@
 <!-- <script src="js/afficherCarteJ.js"></script> -->
 <script src="js/carteTerrain2.js"></script>
 <script src="js/switchFormation.js"></script>
-<script src="js/showCarte.js"></script>
 <script src="js/afficherCarteLS.js"></script>
+<!-- <script src="js/showCarte.js"></script> -->
 <!-- <script src="js/removeTapFromLS.js"></script> -->
+<script src="js/switchPlayers.js"></script>
+
 
 
 
