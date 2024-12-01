@@ -114,8 +114,8 @@ function detailsCard(button) {
                                 </div>
                             </div>
                             <div class="w-full h-1/2 flex gap-2 px-2 text-[14px]">
-                                <button type="button" onclick="modifierJoueur()" class="w-1/2 h-10 bg-green-600 hover:shadow-md hover:shadow-gray-600 hover:bg-green-500  border-none rounded-md">Modifier</button>
-                                <button type="button" onclick="supprimerJoueur()" class="w-1/2 h-10 bg-red-400 hover:shadow-md hover:shadow-gray-600 hover:bg-red-300  border-none rounded-md">Supprimer</button>
+                                <button type="submit" onclick="modifierJoueur()" class="w-1/2 h-10 bg-green-600 hover:shadow-md hover:shadow-gray-600 hover:bg-green-500  border-none rounded-md">Modifier</button>
+                                <button type="submit" onclick="supprimerJoueur()" class="w-1/2 h-10 bg-red-400 hover:shadow-md hover:shadow-gray-600 hover:bg-red-300  border-none rounded-md">Supprimer</button>
                             </div>
                         </div>
             
@@ -189,8 +189,8 @@ function detailsCard(button) {
                                 </div>
                             </div>
                             <div class="w-full h-1/2 flex gap-2 px-2 text-[14px]">
-                                <button type="button" onclick="modifierJoueur()" class="w-1/2 h-10 bg-green-600 hover:shadow-md hover:shadow-gray-600 hover:bg-green-500  border-none rounded-md">Modifier</button>
-                                <button type="button" onclick="supprimerJoueur()" class="w-1/2 h-10 bg-red-400 hover:shadow-md hover:shadow-gray-600 hover:bg-red-300  border-none rounded-md">Supprimer</button>
+                                <button type="submit" onclick="modifierJoueur()" class="w-1/2 h-10 bg-green-600 hover:shadow-md hover:shadow-gray-600 hover:bg-green-500  border-none rounded-md">Modifier</button>
+                                <button type="submit" onclick="supprimerJoueur()" class="w-1/2 h-10 bg-red-400 hover:shadow-md hover:shadow-gray-600 hover:bg-red-300  border-none rounded-md">Supprimer</button>
                             </div>
                         </div>
             

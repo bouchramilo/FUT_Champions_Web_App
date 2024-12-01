@@ -1,4 +1,16 @@
+
+// function savePlayersToLocalStorage() {
+//     localStorage.setItem("players", JSON.stringify(tapJoueurs));
+// }
+
+// function getPlayersFromLocalStorage() {
+//     const storedPlayers = localStorage.getItem("players");
+//     return storedPlayers ? JSON.parse(storedPlayers) : [];
+// }
+
+// const players = getPlayersFromLocalStorage();
 localStorage.setItem("players", JSON.stringify(players));
+  
 // ===========================================================================================================
 
 // tableaux de joueurs en terrain et de remplacements
@@ -13,7 +25,7 @@ if (localStorage.getItem("playersRemp")) {
 }
 
 // Sélection du formulaire par son tag <form>
-const form = document.querySelector("form");
+const form = document.getElementById("addPlayer");
 // let n = 12 ;
 function validNumber(valeurInput) {
   let valueInput = parseInt(valeurInput);
@@ -26,7 +38,7 @@ function validNumber(valeurInput) {
 }
 
 // Listner pour le formilaire d'ajout des joueurs
-form.addEventListener("submit", function (e) {
+form.addEventListener("click", function (e) {
   e.preventDefault();
   var isValid = true;
   // nom de joueur ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -180,8 +192,8 @@ form.addEventListener("submit", function (e) {
   } else {
     // pace de joueur +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     const paceInput = document.getElementById("paceJoueur");
-    const paceJoueur = paceInput.value;
-    //   console.log(paceJoueur);
+    let paceJoueur = paceInput.value;
+    console.log(paceJoueur);
     if (!validNumber(paceJoueur)) {
       paceInput.style.backgroundColor = "red";
       isValid = false;
@@ -614,3 +626,5 @@ form.addEventListener("submit", function (e) {
     form.reset();
   }
 });
+
+
