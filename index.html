@@ -15,8 +15,117 @@
     <!-- ============================================================================================================================== -->
     <!-- Formulaire caché -->
     <div id="formContainer" class=" fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
-
     </div>
+
+    <!-- formulaire de modification  -->
+    <div id="formModifier" class=" absolute inset-0 h-full bg-black bg-opacity-50  max-sm:relative max-sm:top-14 flex justify-center items-center hidden z-50">
+        <div class=" lg:w-full lg:h-[80%] md:h-full sm:h-full md:w-full max-md:w-full py-2  bg-blue-400">
+
+            <form class="px-2 text-sm">
+                <h2 class="text-2xl text-center mb-4">
+                    Modifier un joueur
+                </h2>
+
+                <div
+                    class="w-full lg:flex lg:flex-row max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="nomJoueur">Nom du joueur :</label>
+                        <input type="text" id="" class="nameJ w-full p-2 mb-2 border border-gray-300 rounded-md"
+                            placeholder="le nom du joueur"  required>
+                    </div>
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="photo">Photo de joueur :</label>
+                        <input type="url" id="" class="photoJ w-full p-2 mb-2 border border-gray-300 rounded-md"
+                            placeholder="la photo du joueur"  required>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full lg:flex lg:flex-row max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="flag">Drapeau :</label>
+                        <input type="url" id="" class="flagJ w-full p-2 mb-2 border border-gray-300 rounded-md"
+                            placeholder="url de flag de nationalité du joueur" required>
+
+                    </div>
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="nationality">nationalité :</label>
+                        <input type="text" id="" class="nationalityJ w-full p-2 mb-2 border border-gray-300 rounded-md"
+                            placeholder="nationalité du joueur"  required>
+
+                    </div>
+                </div>
+
+                <div
+                    class="w-full lg:flex lg:flex-row max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="club">Club :</label>
+                        <input type="text" id="" class="clubJ w-full p-2 mb-2 border border-gray-300 rounded-md"
+                            placeholder="le nom du club du joueur"  required>
+
+                    </div>
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="logoClub">logo du Club :</label>
+                        <input type="url" id="" class="logoClubJ w-full p-2 mb-2 border border-gray-300 rounded-md"
+                            placeholder="url de logo du club du joueur"  required>
+
+                    </div>
+                </div>
+
+                <!-- pour choisir la formilaire de joueur -->
+                <div
+                    class="w-full lg:flex lg:flex-row max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="position">Position de joueur
+                            :</label>
+                        <select name="positionJoueur" id=""
+                            class="positionJ w-full p-2 mb-2 border border-gray-300 rounded-md" 
+                            required>
+                            <option value="">position</option>
+                            <option value="GK">GK (Gardien de but)</option>
+                            <option value="CB">CB1 (Défenseur central 2)</option>
+                            <!-- <option value="CB2">CB2 (Défenseur central 1)</option> -->
+                            <option value="RB">RB (Latéral droit)</option>
+                            <option value="LB">LB (Latéral gauche)</option>
+                            <option value="CM">CM1 (Milieu central 1)</option>
+                            <!-- <option value="CM2">CM2 (Milieu central 2)</option>
+                            <option value="CM3">CM3 (Milieu central 3)</option> -->
+                            <option value="LM">LM (Milieu gauche)</option>
+                            <option value="RM">RM (Milieu droit)</option>
+                            <option value="LW">LW (Ailier gauche)</option>
+                            <option value="RW">RW (Ailier droit)</option>
+                            <option value="ST">ST1 (Attaquant 1)</option>
+                            <!-- <option value="ST2">ST2 (Attaquant 2)</option> -->
+                        </select><br>
+                    </div>
+                    <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
+                        <label class="pl-4" for="rating">rating Joueur :</label>
+                        <input type="number" id="" class="ratingJ w-full p-2 mb-2 border border-gray-300 rounded-md"
+                            placeholder="rating"  required>
+                    </div>
+                </div>
+
+                <!-- pour les inputs des joueurs  -->
+                <div id="formPositionModifier" class="w-full h-full ">
+                    <!-- ====================================================================================================== -->
+
+
+                    <!-- ====================================================================================================== -->
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <button type="button" id="modifierPlayer" onclick="sauvegarderModification()"
+                        class="w-2/3  py-2 bg-green-600 text-white rounded-md hover:bg-green-900">
+                        Modifier
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
 
     <div class="w-full h-full">
 
@@ -262,13 +371,15 @@
     </div>
 
 </body>
-<script src="js/players.js"></script>
+<script src="js/players.js">//le fichier js qui contient le tableau de players</script>
 <script src="js/ajouterJoueur2.js"></script>
-<script src="js/carteTerrain2.js"></script>
 <script src="js/switchFormation.js"></script>
+<script src="js/carteTerrain2.js"></script>
 <script src="js/afficherCarteLS.js"></script>
-<script src="js/showCarte.js"></script>
 <script src="js/switchPlayers.js"></script>
+<script src="js/showCarte.js"></script>
+<script src="js/supprimerCarteJ.js"></script>
+<script src="js/modifierCarteJ.js"></script>
 <!-- <script src="js/removeTapFromLS.js"></script> -->
 
 

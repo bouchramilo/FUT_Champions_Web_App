@@ -24,42 +24,29 @@ function supprimerJoueur() {
 
     // Mettre à jour l'affichage après suppression
     mettreAJourAffichage();
+    
+    formContainer.classList.toggle("hidden");
+    
 }
 
 // Fonction pour afficher les joueurs
 function mettreAJourAffichage() {
     const RemplacementCartes = document.getElementById("RemplacementCartes");
-    const trrnCartes = document.getElementById("playersCourent");
+    // const trrnCartes = document.getElementById("playersCourent");
 
     RemplacementCartes.innerHTML = ""; // Effacer le contenu précédent
-    trrnCartes.innerHTML = ""; // Effacer le contenu précédent
+    // trrnCartes.innerHTML = ""; // Effacer le contenu précédent
 
+    // console.log("test");
     // Recréer la liste de joueurs restants
     players.forEach(player => {
+        // let posi = player.position ;
         afficherCarteRempl(player);
-        afficherCarteTrn(player, player.position.toLowerCase());
+        // afficherCarteTrn(player, posi.toLowerCase());
     });
 }
-
-// Fonction simulée pour afficher une carte de remplacement
-// function afficherCarteRempl(joueur) {
-    
-// }
-
-// // Fonction simulée pour afficher une carte dans une autre section
-// function afficherCarteTrn(player, DivCarte) {
-
-// }
 
 // Initialisation des affichages au chargement de la page
 window.onload = function () {
     mettreAJourAffichage();
 };
-
-
-
-
-
-
-
-function modifierJoueur(){}

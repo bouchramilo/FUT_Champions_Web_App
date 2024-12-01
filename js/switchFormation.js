@@ -1,7 +1,17 @@
 
 const SwFormation = document.getElementById("formation");
+// window.onload = function() {
+//     // Vérifie si 'playersTrrn' existe déjà
+//     if (!localStorage.getItem("playersTrrn")) {
+//         localStorage.setItem("playersTrrn", JSON.stringify([])); // Initialise à un tableau vide si inexistant
+//     }
+
+//     // Affiche les données actuelles dans la console
+//     console.log(localStorage.getItem("playersTrrn")); // Affichera les données actuelles ou "[]"
+// };
 
 SwFormation.addEventListener("change", () => {
+   
 
     const typeFormation = SwFormation.value ;
     console.log("formation : "+ typeFormation);
