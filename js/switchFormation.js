@@ -1,13 +1,10 @@
-const SwFormation = document.getElementById("formation");
 
+const SwFormation = document.getElementById("formation");
 
 SwFormation.addEventListener("change", () => {
 
     const typeFormation = SwFormation.value ;
     console.log("formation : "+ typeFormation);
-
-    // const selectElement = document.getElementById("fruits");
-    // SwFormation.classList.toggle("bg-orange-400") ;
 
     const DIVattaquant = document.getElementById("attaquants");
     const DIVmilieux = document.getElementById("milieux");
@@ -21,8 +18,8 @@ SwFormation.addEventListener("change", () => {
 
                     <!-- carte 1  -->
                         <button data-id="11"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "ST1">
-                            <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "ST">
+                            <div id="" class="st w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                 
 
@@ -31,8 +28,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 2 -->
                         <button data-id="10"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "ST2">
-                            <div id="st2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "ST">
+                            <div id="" class="st w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                 
 
@@ -46,8 +43,8 @@ SwFormation.addEventListener("change", () => {
 
                     <!-- carte 1  -->
                         <button data-id="9"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "LM">
-                            <div id="lm" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "LM">
+                            <div id="" class="lm w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                
                                 <!-- --------------------------------------------------------------------- -->
@@ -55,8 +52,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 2 -->
                         <button data-id="8"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM1">
-                            <div  id="cm1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM">
+                            <div  id="" class="cm w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                             
                                 <!-- --------------------------------------------------------------------- -->
@@ -64,8 +61,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 3 -->
                         <button data-id="7"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM2">
-                            <div id="cm2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM">
+                            <div id="" class="cm w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                
                                 <!-- --------------------------------------------------------------------- -->
@@ -73,8 +70,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 4 -->
                         <button data-id="6"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "RM">
-                            <div id="rm" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "RM">
+                            <div id="" class="rm w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
                                 
                                 <!-- --------------------------------------------------------------------- -->
@@ -91,8 +88,8 @@ SwFormation.addEventListener("change", () => {
 
                     <!-- carte 1  -->
                         <button data-id="11"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "LW">
-                            <div id="lw" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "LW">
+                            <div id="" class="lw w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
@@ -100,8 +97,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 2 -->
                         <button data-id="10"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "ST1">
-                            <div id="st1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "ST">
+                            <div id="" class="st w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
@@ -109,8 +106,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 3 -->
                         <button data-id="9"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "RW">
-                            <div id="rw" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "RW">
+                            <div id="" class="rw w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
@@ -124,8 +121,8 @@ SwFormation.addEventListener("change", () => {
 
                     <!-- carte 1  -->
                         <button data-id="8"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM1">
-                            <div id="cm1" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM">
+                            <div id="" class="cm w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
@@ -133,8 +130,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 2 -->
                         <button data-id="7"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM2">
-                            <div id="cm2" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM">
+                            <div id="" class="cm w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->
@@ -142,8 +139,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
                     <!-- carte 3 -->
                         <button data-id="6"
-                            class=" card h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM3">
-                            <div id="cm3" class="w-full h-max  mx-3 text-white text-center font-bold">
+                            class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "CM">
+                            <div id="" class="cm w-full h-max  mx-3 text-white text-center font-bold">
                                 <!-- --------------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------------- -->

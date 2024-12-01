@@ -1,109 +1,26 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-  // pour les joueur de remplacement
-  // const remplacement = document.getElementById("RemplacementCartes");
+  // Chargement des joueurs de remplacement
+  const savedReplacementCards = JSON.parse(localStorage.getItem("players")) || [];
+  const playersRempl = savedReplacementCards; 
+  playersRempl.forEach((playerRempl) => afficherCarteRempl(playerRempl));
 
-  const savedCard = JSON.parse(localStorage.getItem("players")) || [];
+  // // Chargement des joueurs sur le terrain
+  // const savedTerrainCards = JSON.parse(localStorage.getItem("playersTrrn")) || [];
+  // savedTerrainCards.forEach((playerTrrn) => {
+  //   const position = playerTrrn.position;
 
-  savedCard.forEach((playerRempl) => {
-    afficherCarteRempl(playerRempl);
-  });
+  //   // Dynamique : sélectionner l'élément correspondant à la position
+  //   const DIVplayer = document.querySelector(`.${position.toLowerCase()}`);
 
-  // pour les joueur de terrain
-  const savedCardTrrn = JSON.parse(localStorage.getItem("playersTrrn")) || [];
-
-  savedCardTrrn.forEach((playerTrrn) => {
-    // let divCard = savedCard.find((playerTrrn) => playerTrrn.position === playerTrrn.id);
-    // let divCard = playerTrrn.position ;
-    let DIVplayer;
-
-    switch (playerTrrn.position) {
-      case "GK":
-        DIVplayer = document.getElementById("gk");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "CB1":
-        DIVplayer = document.getElementById("cb1");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "CB2":
-        DIVplayer = document.getElementById("cb2");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "RB":
-        DIVplayer = document.getElementById("rb");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "LB":
-        DIVplayer = document.getElementById("lb");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "CM1":
-        DIVplayer = document.getElementById("cm1");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "CM2":
-        DIVplayer = document.getElementById("cm2");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "CM3":
-        DIVplayer = document.getElementById("cm3");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "RM":
-        DIVplayer = document.getElementById("rm");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "LM":
-        DIVplayer = document.getElementById("lm");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "LW":
-        DIVplayer = document.getElementById("lw");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "RW":
-        DIVplayer = document.getElementById("rw");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-
-      case "ST1":
-        DIVplayer = document.getElementById("st1");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-      case "ST2":
-        DIVplayer = document.getElementById("st2");
-        afficherCarteTrn(playerTrrn, DIVplayer);
-
-        break;
-    }
-
-    // afficherCarteTrn(playerTrrn);
-  });
+  //   if (DIVplayer) {
+  //     // afficherCarteTrn(playerTrrn, DIVplayer);
+  //   } else {
+  //     // console.log("Aucune div trouvée pour la position : ",position);
+  //   }
+  // });
 });
+
 
 function afficherCarteTrn(joueur, DivCarte) {
     const trrnCartes = document.getElementById("playersCourent");
@@ -215,8 +132,8 @@ function afficherCarteRempl(joueur) {
   // let n = 12 ;
   if (joueur.position === "GK") {
     RemplacementCartes.innerHTML += `
-                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
-                          <div id="cb1" class="w-full h-max  mx-3 text-center font-bold">
+                      <button data-id="" class="card-rempl card-details h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
+                          <div id="" class="gk w-full h-max  mx-3 text-center font-bold">
                           <!-- --------------------------------------------------------------------- -->
                               <div class="flex h-2/3 justify-center ">
                                     <div class="h-full w-4/5   bg-cover  bg-center justify-end items-center flex flex-row">
@@ -267,8 +184,8 @@ function afficherCarteRempl(joueur) {
     //   n++;
   } else {
     RemplacementCartes.innerHTML += `
-                      <button data-id="" class="card-rempl h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
-                          <div id="cb1" class="w-full h-max  mx-3 text-center font-bold">
+                      <button data-id="" class="card-rempl card-details h-60 w-[95%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center" data-position = "${joueur.position}">
+                          <div id="" class="${joueur.position.toLowerCase()} w-full h-max  mx-3 text-center font-bold">
                           <!-- --------------------------------------------------------------------- -->
                               <div class="flex h-2/3 justify-center ">
                                     <div class="h-full w-4/5   bg-cover  bg-center justify-end items-center flex flex-row">

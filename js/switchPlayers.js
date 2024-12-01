@@ -1,64 +1,3 @@
-// let playersCourent = document.querySelector(".playersCourent");
-
-// // Écouteur pour les clics sur des cartes
-// playersCourent.addEventListener("click", (e) => {
-//     if (e.target.classList.contains("card")) {
-//         console.log("test 4", e.target);
-
-//         playersCourent.querySelectorAll(".card").forEach(card => {
-//             card.style.scale = 1;
-//         });
-
-//         e.target.style.scale = 1.2;
-        
-//     }
-// });
-
-
-// // Écouteur pour les clics en dehors des cartes
-// playersCourent.addEventListener("click", (e) => {
-//     if (!e.target.closest(".card")) {
-//         console.log("Clic en dehors des cartes");
-        
-//         playersCourent.querySelectorAll(".card").forEach(card => {
-//             card.style.scale = 1;
-//         });
-//     }
-// });
-
-// // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// // ecouteur pour la partie des card en remplacement
-
-// let playersRempl = document.querySelector(".playersRempl");
-
-// // Écouteur pour les clics sur des cartes
-// playersRempl.addEventListener("click", (e) => {
-//     if (e.target.classList.contains("card-rempl")) {
-//         console.log("test 1", e.target);
-
-//         playersRempl.querySelectorAll(".card-rempl").forEach(card => {
-//             card.style.scale = 1;
-//         });
-
-//         e.target.style.scale = 1.2;
-        
-//     }
-// });
-
-
-// // Écouteur pour les clics en dehors des cartes
-// playersRempl.addEventListener("click", (e) => {
-//     if (!e.target.closest(".card-rempl")) {
-//         console.log("Clic en dehors des cartes remplacement");
-        
-//         playersRempl.querySelectorAll(".card-rempl").forEach(card => {
-//             card.style.scale = 1;
-//         });
-//     }
-// });
-
-
-
 
 let playersCourent = document.querySelector(".playersCourent"); // Cards sur le terrain
 let playersRempl = document.querySelector(".playersRempl"); // cards en remplacement
@@ -72,23 +11,6 @@ function reinitialiserStyle(container, cardClass) {
         card.style.scale = 1;
     });
 }
-
-// Fonction pour effectuer le switch entre deux cartes
-// function switchCards(card1, card2) {
-//     let tempCard = card1.innerHTML;
-//     card1.innerHTML = card2.innerHTML;
-//     card2.innerHTML = tempCard;
-
-//     console.log("Switch effectué entre :", card1, card2);
-
-//     cardSelectionner = null;
-//     selecteddiv = null;
-
-//     reinitialiserStyle(playersCourent, ".card");
-//     reinitialiserStyle(playersRempl, ".card-rempl");
-// }
-
-
 
 function switchCards(card1, card2) {
     let position1 = card1.getAttribute("data-position");
