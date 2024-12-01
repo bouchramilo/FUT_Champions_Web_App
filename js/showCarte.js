@@ -1,40 +1,58 @@
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Selection des elements
+playersCourent = document.querySelector(".playersCourent"); // Cards sur le terrain
+playersRempl = document.querySelector(".playersRempl"); // Cards en remplacement
+cardSelectionner = null; 
+const formContainer = document.getElementById("formContainer"); // conteainer pour afficher   les details
 
-        // Récupérer le bouton et le formulaire
-        const showFormButton = document.querySelectorAll('button[data-position]');
-        const formContainer = document.getElementById('formContainer');
+// Gestionnaire pour dblclick
+const playerDetails = [playersCourent, playersRempl];
+playerDetails.forEach((player) => {
+  player.addEventListener("dblclick", (e) => {
+    console.log("element clique : ", e.target);
 
-        
-    showFormButton.forEach((button) => {
-        button.addEventListener('dblclick', () => {
-            formContainer.classList.toggle('hidden');
-            
-            // Récupérer les données de la carte via les attributs data-*
-            const joueurPosition = button.dataset.position;
-            const joueurRating = button.querySelector('p.text-center').textContent;
-            const joueurName = button.querySelector('.name').textContent;
-            const joueurFlag = button.querySelector('.jflag');
-            const joueurLogo = button.querySelector('.jlogo');
-            const jFlagSrc = joueurFlag.src;
-            const jLogoSrc = joueurLogo.src;
-            
-            const joueurImg = button.querySelector('.jimg');
-            const jImgSrc = joueurImg.src;
+    if (e.target.classList.contains("card-details")) {
+      console.log("Carte selectionnee pour affichage : ", e.target);
 
-            
-            
-            
-            // const joueurStats = Array.from(button.querySelectorAll('table tr:last-child td')).map(td => td.textContent);
-            if( joueurPosition === "GK" ){
-                // alert(joueurPosition);
-                const joueurDiving = button.querySelector('.jdiving').textContent;
-                const joueurHandling = button.querySelector('.jhandling').textContent;
-                const joueurKicking = button.querySelector('.jkiking').textContent;
-                const joueurReflexes = button.querySelector('.jreflexes').textContent;
-                const joueurSpeed = button.querySelector('.jspeed').textContent;
-                const joueurPositioning = button.querySelector('.jpositioning').textContent;
+      detailsCard(e.target);
+    } else {
+      console.log("L'element clique n'est pas une carte valide.");
+    }
 
+    const btFfermer = document.getElementById("btFfermer");
+    btFfermer.addEventListener("click", () => {
+      formContainer.classList.toggle("hidden");
+    });
+  });
+});
 
-                formContainer.innerHTML = `
+function detailsCard(button) {
+  const joueurPosition = button.querySelector(".jposition").textContent;
+  const joueurRating = button.querySelector("p.text-center").textContent;
+  const joueurName = button.querySelector(".name").textContent;
+
+  const joueurFlag = button.querySelector(".jflag");
+  const jFlagSrc = joueurFlag.src;
+
+  const joueurLogo = button.querySelector(".jlogo");
+  const jLogoSrc = joueurLogo.src;
+
+  const joueurImg = button.querySelector(".jimg");
+  const jImgSrc = joueurImg.src;
+
+//   mettre la carte de details visible
+  formContainer.classList.remove("hidden");
+
+  if (joueurPosition === "GK") {
+    // alert(joueurPosition);
+    const joueurDiving = button.querySelector(".jdiving").textContent;
+    const joueurHandling = button.querySelector(".jhandling").textContent;
+    const joueurKicking = button.querySelector(".jkiking").textContent;
+    const joueurReflexes = button.querySelector(".jreflexes").textContent;
+    const joueurSpeed = button.querySelector(".jspeed").textContent;
+    const joueurPositioning = button.querySelector(".jpositioning").textContent;
+
+    formContainer.innerHTML = `
 
                         <div class="bg-white p-2 rounded-lg shadow-lg w-96 flex flex-col gap-2">
                             <div class="w-full flex flex-row ">
@@ -103,17 +121,15 @@
             
             
                 `;
-            }
-            else{
+  } else {
+    const joueurPace = button.querySelector(".jpace").textContent;
+    const joueurShooting = button.querySelector(".jshooting").textContent;
+    const joueurPassing = button.querySelector(".jpassing").textContent;
+    const joueurDribbling = button.querySelector(".jdribbling").textContent;
+    const joueurDefending = button.querySelector(".jdefending").textContent;
+    const joueurPhysical = button.querySelector(".jphysical").textContent;
 
-                const joueurPace = button.querySelector('.jpace').textContent;
-                const joueurShooting = button.querySelector('.jshooting').textContent;
-                const joueurPassing = button.querySelector('.jpassing').textContent;
-                const joueurDribbling = button.querySelector('.jdribbling').textContent;
-                const joueurDefending = button.querySelector('.jdefending').textContent;
-                const joueurPhysical = button.querySelector('.jphysical').textContent;
-
-                formContainer.innerHTML = `
+    formContainer.innerHTML = `
 
                         <div class="bg-white p-4 rounded-lg shadow-lg w-96 flex flex-col gap-2">
                             <div class="w-full flex flex-row ">
@@ -180,14 +196,5 @@
             
             
                 `;
-
-            }
-
-                const btFfermer = document.getElementById("btFfermer");
-
-                btFfermer.addEventListener('click', () => {
-                    formContainer.classList.toggle('hidden');
-        });
-
-        });
-    });
+  }
+}
