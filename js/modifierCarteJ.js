@@ -15,7 +15,6 @@ function modifierJoueur() {
 
   localStorage.setItem("index", JSON.stringify(index));
 
-
   console.log("Données dans local storage :", players);
   // console.log("Données modifiées :", playr);
   console.log("Index trouvé : ", index);
@@ -152,7 +151,6 @@ function sauvegarderModification() {
   let Joueurs = JSON.parse(localStorage.getItem("players")) || [];
   let index = JSON.parse(localStorage.getItem("index")) || -1;
 
-
   console.log("Données récupérées :", Joueurs);
 
   let playr = {};
@@ -207,16 +205,17 @@ function sauvegarderModification() {
     console.warn("Formulaire de modification introuvable.");
   }
 
-//   console.log("test 1");
+  //   console.log("test 1");
 
-let Joueurstrn = JSON.parse(localStorage.getItem("playersTrrn")) || [];
+  let Joueurstrn = JSON.parse(localStorage.getItem("playersTrrn")) || [];
 
+  // Trouver l'index du joueur dans le tableau avec le nom donné
+  let ind = Joueurstrn.findIndex(
+    (player) => player.name.toLowerCase() === players[index].name.toLowerCase()
+  );
 
-   // Trouver l'index du joueur dans le tableau avec le nom donné
-   let ind = Joueurstrn.findIndex((player) => player.name.toLowerCase() === players[index].name.toLowerCase() );
-
-  if( ind !== -1 ){
-		afficherCarteRempl(Joueurstrn[ind]);
+  if (ind !== -1) {
+    afficherCarteRempl(Joueurstrn[ind]);
   }
 
   metAJourAffichageRmep(Joueurs);
@@ -230,7 +229,7 @@ let Joueurstrn = JSON.parse(localStorage.getItem("playersTrrn")) || [];
 function metAJourAffichageRmep(Joueurs) {
   const RemplacementCartes = document.getElementById("RemplacementCartes");
 
-  RemplacementCartes.innerHTML = ""; 
+  RemplacementCartes.innerHTML = "";
 
   Joueurs.forEach((player) => {
     afficherCarteRempl(player);
@@ -241,10 +240,9 @@ function metAJourAffichageRmep(Joueurs) {
 function metAJourAffichageTrn(Joueurs) {
   const trrnCartes = document.getElementById("playersCourent");
 
-  trrnCartes.innerHTML = ""; 
+  trrnCartes.innerHTML = "";
 
   Joueurs.forEach((player) => {
-	afficherCarteTrn(player);
+    afficherCarteTrn(player);
   });
-
 }

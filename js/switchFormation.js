@@ -1,20 +1,16 @@
-
 const SwFormation = document.getElementById("formation");
 
 SwFormation.addEventListener("change", () => {
-   
+  const typeFormation = SwFormation.value;
+  console.log("formation : " + typeFormation);
 
-    const typeFormation = SwFormation.value ;
-    console.log("formation : "+ typeFormation);
+  const DIVattaquant = document.getElementById("attaquants");
+  const DIVmilieux = document.getElementById("milieux");
+  const DIVdefenseurs = document.getElementById("defenseurs");
+  const DIVdeGardien = document.getElementById("gardien");
 
-    const DIVattaquant = document.getElementById("attaquants");
-    const DIVmilieux = document.getElementById("milieux");
-    const DIVdefenseurs = document.getElementById("defenseurs");
-    const DIVdeGardien = document.getElementById("gardien");
-
-    if( typeFormation === "1-4-4-2" ){
-
-        DIVattaquant.innerHTML = `
+  if (typeFormation === "1-4-4-2") {
+    DIVattaquant.innerHTML = `
 
                     <!-- carte 1  -->
                         <button data-id="11"
@@ -39,7 +35,7 @@ SwFormation.addEventListener("change", () => {
 
             `;
 
-        DIVmilieux.innerHTML = `
+    DIVmilieux.innerHTML = `
 
                     <!-- carte 1  -->
                         <button data-id="9"
@@ -79,11 +75,8 @@ SwFormation.addEventListener("change", () => {
                         </button>
 
             `;
-        
-    }
-    else if( typeFormation === "1-4-3-3" ){
-
-        DIVattaquant.innerHTML = `
+  } else if (typeFormation === "1-4-3-3") {
+    DIVattaquant.innerHTML = `
 
                     <!-- carte 1  -->
                         <button data-id="11"
@@ -115,7 +108,7 @@ SwFormation.addEventListener("change", () => {
         
             `;
 
-        DIVmilieux.innerHTML = `
+    DIVmilieux.innerHTML = `
 
                     <!-- carte 1  -->
                         <button data-id="8"
@@ -146,11 +139,9 @@ SwFormation.addEventListener("change", () => {
                         </button>
 
             `;
+  }
 
-    }
-
-    // pour la partie de defensuers et gk
-    DIVdefenseurs.classList.remove("hidden");
-    DIVdeGardien.classList.remove("hidden");
-
+  // pour la partie de defensuers et gk
+  DIVdefenseurs.classList.remove("hidden");
+  DIVdeGardien.classList.remove("hidden");
 });

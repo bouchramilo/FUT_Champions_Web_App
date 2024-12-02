@@ -4,19 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
     JSON.parse(localStorage.getItem("players")) || [];
   const playersRempl = savedReplacementCards;
   playersRempl.forEach((playerRempl) => afficherCarteRempl(playerRempl));
-
 });
 // Function pour afficher les cartes de remplacement *****
 function afficherCarteTrn(joueur) {
   const trrnCartes = document.getElementById("playersCourent");
   //   let JoueursTrn = JSON.parse(localStorage.getItem("playersTrrn")) || [];
   const classDivCarte = joueur.position.toLowerCase();
-  const AllDivCarte = document.querySelectorAll("."+classDivCarte);
+  const AllDivCarte = document.querySelectorAll("." + classDivCarte);
 
   AllDivCarte.forEach((DivCarte) => {
     // let DivCarte = DivCard ;
     if (joueur.position === "GK") {
-
       DivCarte.innerHTML = `
                           <!-- --------------------------------------------------------------------- -->
                               <div class="flex h-2/3 justify-center ">
@@ -64,7 +62,6 @@ function afficherCarteTrn(joueur) {
                               <!-- --------------------------------------------------------------------- -->
               `;
     } else {
-
       DivCarte.innerHTML = `
                           <!-- --------------------------------------------------------------------- -->
                               <div class="flex h-2/3 justify-center ">
