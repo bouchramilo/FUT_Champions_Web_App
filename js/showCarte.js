@@ -2,7 +2,7 @@
 // Selection des elements
 playersCourent = document.querySelector(".playersCourent"); // Cards sur le terrain
 playersRempl = document.querySelector(".playersRempl"); // Cards en remplacement
-cardSelectionner = null; 
+cardSelectionner = null;
 const formContainer = document.getElementById("formContainer"); // conteainer pour afficher   les details
 
 // Gestionnaire pour dblclick
@@ -40,7 +40,7 @@ function detailsCard(button) {
   const joueurImg = button.querySelector(".jimg");
   const jImgSrc = joueurImg.src;
 
-//   mettre la carte de details visible
+  //   mettre la carte de details visible
   formContainer.classList.remove("hidden");
 
   if (joueurPosition === "GK") {

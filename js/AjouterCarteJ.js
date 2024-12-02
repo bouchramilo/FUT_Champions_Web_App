@@ -1,7 +1,6 @@
-
 // const players = getPlayersFromLocalStorage();
 localStorage.setItem("players", JSON.stringify(players));
-  
+
 // ===========================================================================================================
 
 // tableaux de joueurs en terrain et de remplacements
@@ -617,5 +616,3 @@ form.addEventListener("click", function (e) {
     form.reset();
   }
 });
-
-

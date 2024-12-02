@@ -23,7 +23,7 @@ form.addEventListener("submit", function (e) {
   // nom de joueur ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   const nameInput = document.getElementById("nomJoueur");
   const name = nameInput.value;
-  let regex = /^[A-Za-z]{2,}([ -][A-Za-z]{2,})*$/ ;
+  let regex = /^[A-Za-z]{2,}([ -][A-Za-z]{2,})*$/;
   // console.log(name);
   if (name.trim().length < 4 || !regex.test(name)) {
     nameInput.style.backgroundColor = "red";
@@ -42,10 +42,10 @@ form.addEventListener("submit", function (e) {
   // nationality de joueur ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   const nationalityInput = document.getElementById("nationalityJoueur");
   const nationality = nationalityInput.value;
-  let regex_2 = /^[A-Za-z]{2,}$/ ; // regex vérifier si le nom de la nationalité est valid
+  let regex_2 = /^[A-Za-z]{2,}$/; // regex vérifier si le nom de la nationalité est valid
 
   //   console.log(nationality);
-  if (!regex_2.test(nationality) ) {
+  if (!regex_2.test(nationality)) {
     nationalityInput.style.backgroundColor = "red";
     isValid = false;
   }
@@ -378,7 +378,7 @@ form.addEventListener("submit", function (e) {
           `;
     }
 
-    // ajouter la joueur a tableau de joueur , stocker dans localStorage 
+    // ajouter la joueur a tableau de joueur , stocker dans localStorage
     // players.push(joueur);
     // localStorage.setItem("players", JSON.stringify(players));
 
@@ -386,7 +386,7 @@ form.addEventListener("submit", function (e) {
     form.reset();
     alert("Joueur ajouté avec succès !");
   } else {
-    // si une donnée n'est pas valide 
+    // si une donnée n'est pas valide
     alert("Données pas valides !");
   }
 });

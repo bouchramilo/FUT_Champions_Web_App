@@ -9,7 +9,7 @@ ajouterJoueur2.addEventListener("change", () => {
     formPosition.innerHTML = `<p class="text-red-600">Choisissez une position</p>`;
   } else {
     if (ajouterJoueur2.value === "GK") {
-        formPosition.innerHTML = `
+      formPosition.innerHTML = `
                 <div
                             class="w-full lg:flex lg:flex-col max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
                             <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
@@ -65,7 +65,7 @@ ajouterJoueur2.addEventListener("change", () => {
                 
                 `;
     } else {
-        formPosition.innerHTML = `
+      formPosition.innerHTML = `
                 
                <div
                             class="w-full lg:flex lg:flex-col max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
