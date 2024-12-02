@@ -1,13 +1,4 @@
 
-// function savePlayersToLocalStorage() {
-//     localStorage.setItem("players", JSON.stringify(tapJoueurs));
-// }
-
-// function getPlayersFromLocalStorage() {
-//     const storedPlayers = localStorage.getItem("players");
-//     return storedPlayers ? JSON.parse(storedPlayers) : [];
-// }
-
 // const players = getPlayersFromLocalStorage();
 localStorage.setItem("players", JSON.stringify(players));
   

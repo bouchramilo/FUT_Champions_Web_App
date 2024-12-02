@@ -9,6 +9,7 @@ let selecteddiv = null;
 function reinitialiserStyle(container, cardClass) {
     container.querySelectorAll(cardClass).forEach(card => {
         card.style.scale = 1;
+
     });
 }
 
@@ -56,7 +57,6 @@ playersCourent.addEventListener("click", (e) => {
 playersRempl.addEventListener("click", (e) => {
     if (e.target.classList.contains("card-rempl") && !e.target.classList.contains("empty")) {
         console.log("Carte sélectionnée en remplacement:", e.target);
-
         if (cardSelectionner && selecteddiv !== playersRempl) {
             switchCards(cardSelectionner, e.target);
         } else {
@@ -67,3 +67,5 @@ playersRempl.addEventListener("click", (e) => {
         }
     }
 });
+
+
