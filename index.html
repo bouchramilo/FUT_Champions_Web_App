@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index carte 2 </title>
+    <title>index FUT | Create Formation </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
 
-    </style>
 </head>
 
 <body class="bg-gray-100">
@@ -18,7 +16,8 @@
     </div>
 
     <!-- formulaire de modification  -->
-    <div id="formModifier" class=" absolute inset-0 h-full bg-black bg-opacity-50  max-sm:relative max-sm:top-14 flex justify-center items-center hidden z-50">
+    <div id="formModifier"
+        class=" absolute inset-0 h-full bg-black bg-opacity-50  max-sm:relative max-sm:top-14 flex justify-center items-center hidden z-50">
         <div class=" lg:w-full lg:h-[80%] md:h-full sm:h-full md:w-full max-md:w-full py-2  bg-blue-400">
 
             <form class="px-2 text-sm">
@@ -31,12 +30,12 @@
                     <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
                         <label class="pl-4" for="nomJoueur">Nom du joueur :</label>
                         <input type="text" id="" class="nameJ w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="le nom du joueur"  required>
+                            placeholder="le nom du joueur" required>
                     </div>
                     <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
                         <label class="pl-4" for="photo">Photo de joueur :</label>
                         <input type="url" id="" class="photoJ w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="la photo du joueur"  required>
+                            placeholder="la photo du joueur" required>
                     </div>
                 </div>
 
@@ -51,7 +50,7 @@
                     <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
                         <label class="pl-4" for="nationality">nationalité :</label>
                         <input type="text" id="" class="nationalityJ w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="nationalité du joueur"  required>
+                            placeholder="nationalité du joueur" required>
 
                     </div>
                 </div>
@@ -61,13 +60,13 @@
                     <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
                         <label class="pl-4" for="club">Club :</label>
                         <input type="text" id="" class="clubJ w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="le nom du club du joueur"  required>
+                            placeholder="le nom du club du joueur" required>
 
                     </div>
                     <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
                         <label class="pl-4" for="logoClub">logo du Club :</label>
                         <input type="url" id="" class="logoClubJ w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="url de logo du club du joueur"  required>
+                            placeholder="url de logo du club du joueur" required>
 
                     </div>
                 </div>
@@ -79,8 +78,7 @@
                         <label class="pl-4" for="position">Position de joueur
                             :</label>
                         <select name="positionJoueur" id=""
-                            class="positionJ w-full p-2 mb-2 border border-gray-300 rounded-md" 
-                            required>
+                            class="positionJ w-full p-2 mb-2 border border-gray-300 rounded-md" required>
                             <option value="">position</option>
                             <option value="GK">GK (Gardien de but)</option>
                             <option value="CB">CB1 (Défenseur central 2)</option>
@@ -101,7 +99,7 @@
                     <div class="lg:w-full max-md:w-1/2 md:w-1/2 max-sm:w-full">
                         <label class="pl-4" for="rating">rating Joueur :</label>
                         <input type="number" id="" class="ratingJ w-full p-2 mb-2 border border-gray-300 rounded-md"
-                            placeholder="rating"  required>
+                            placeholder="rating" required>
                     </div>
                 </div>
 
@@ -124,14 +122,11 @@
         </div>
     </div>
 
-
-
-
+    <!-- ============================================================================================================================== -->
     <div class="w-full h-full">
 
         <!-- ============================================================================================================================== -->
-        <!-- ============================================================================================================================== -->
-        <!-- section en haut -->
+        <!-- section en haut de formulaire -->
         <section class="bg-blue-100 w-full h-20 flex flex-col justify-center items-center">
             <select name="formation" id="formation"
                 class="lg:w-5/12 md:w-5/12 max-sm:w-11/12 max-md:11/12 p-2 mb-2 border border-gray-300 rounded-md">
@@ -141,8 +136,6 @@
             </select>
         </section>
         <!-- ============================================================================================================================== -->
-
-
 
         <!-- ============================================================================================================================== -->
         <!-- section principal  -->
@@ -155,6 +148,7 @@
                     <h2 class="text-2xl text-center mb-4">
                         Formulaire de saisie les données d'un joueur
                     </h2>
+
 
                     <div
                         class="w-full lg:flex lg:flex-col max-md:flex max-md:flex-row max-sm:flex max-sm:flex-col max-md:gap-2 md:flex md:gap-2   ">
@@ -214,18 +208,18 @@
                                 class="w-full p-2 mb-2 border border-gray-300 rounded-md" required>
                                 <option value="">position</option>
                                 <option value="GK">GK (Gardien de but)</option>
-                                <option value="CB">CB1 (Défenseur central 2)</option>
-                                <!-- <option value="CB2">CB2 (Défenseur central 1)</option> -->
+                                <option value="CB">CB (Défenseur central 2)</option>
+                                <!-- <option value="CB2">CB2 (Défenseur central )</option> -->
                                 <option value="RB">RB (Latéral droit)</option>
                                 <option value="LB">LB (Latéral gauche)</option>
-                                <option value="CM">CM1 (Milieu central 1)</option>
+                                <option value="CM">CM (Milieu central )</option>
                                 <!-- <option value="CM2">CM2 (Milieu central 2)</option>
-                                <option value="CM3">CM3 (Milieu central 3)</option> -->
+                                    <option value="CM3">CM3 (Milieu central 3)</option> -->
                                 <option value="LM">LM (Milieu gauche)</option>
                                 <option value="RM">RM (Milieu droit)</option>
                                 <option value="LW">LW (Ailier gauche)</option>
                                 <option value="RW">RW (Ailier droit)</option>
-                                <option value="ST">ST1 (Attaquant 1)</option>
+                                <option value="ST">ST (Attaquant )</option>
                                 <!-- <option value="ST2">ST2 (Attaquant 2)</option> -->
                             </select><br>
                         </div>
@@ -250,22 +244,24 @@
                     </div>
                 </form>
 
+
             </div>
             <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
             <!-- stadium +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
             <div
-                class="lg:w-9/12 md:w-full max-md:w-full max-sm:w-full bg-no-repeat bg-blue-100 bg-cover flex flex-col justify-center items-center  gap-10">
+                class="lg:w-9/12 md:w-full max-md:w-full max-sm:w-full bg-no-repeat bg-blue-200 bg-cover flex flex-col justify-center items-center  gap-10">
 
 
-                <div class="relative lg:w-[95%] max-sm:w-[100%] sm:w-full h-[1000px]  overflow-hidden">
+                <div class="relative lg:w-[95%] max-sm:w-[100%] sm:w-full h-[1000px] max-sm:h-[640px] overflow-hidden">
 
                     <img id="bg" src="images/stadium_background.webp" alt="background home"
                         class="absolute inset-0 w-full h-full object-cover">
                     <div id="playersCourent"
-                        class="playersCourent relative top-1 bottom-1 z-10 flex flex-col lg:gap-1 md:gap-6 max-md:gap-4 max-sm:gap-2 items-center justify-center h-full bg-transparent bg-opacity-100">
+                        class="playersCourent relative top-1 bottom-1 z-10 flex flex-col  lg:gap-1 max-lg:gap-1 md:gap-6 max-md:gap-4 max-sm:gap-2 sm:gap-2 max-sm:h-full items-center justify-center h-full bg-transparent bg-opacity-100">
 
                         <!-- attaquants +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                        <div id="attaquants" class="flex flex-row w-full place-items-center justify-center lg:gap-20 ">
+                        <div id="attaquants"
+                            class="flex flex-row justify-center place-items-center w-full lg:gap-12 md:gap-6 max-md:gap-6 max-sm:gap-2 max-sm:w-[80%]  ">
                             <!-- carte 1  -->
 
                             <!-- carte 2 -->
@@ -275,7 +271,8 @@
                         </div>
 
                         <!-- milieux +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                        <div id="milieux" class="flex flex-row w-full place-items-center justify-center lg:gap-20 ">
+                        <div id="milieux"
+                            class="flex flex-row justify-center w-full lg:gap-12 md:gap-6 max-md:gap-6 max-sm:gap-2 place-items-center">
                             <!-- carte 1  -->
 
                             <!-- carte 2 -->
@@ -285,10 +282,11 @@
                         </div>
 
                         <!-- défenseurs +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-                        <div id="defenseurs" class="flex flex-row w-full lg:gap-4 justify-center hidden">
+                        <div id="defenseurs"
+                            class="flex flex-row justify-center w-full lg:gap-12 md:gap-6 max-md:gap-6 max-sm:gap-2 hidden">
                             <!-- carte 1 -->
                             <button data-id="5"
-                                class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center"
+                                class="relative bottom-10 card card-details lg:h-60 max-lg:h-56 md:h-56 max-md:h-44 sm:h-36 max-sm:h-32 max-sm:w-[30%] w-[18%]  bg-[url('images/badge_gold.webp')] hover:shadow-xl hover:shadow-green-600   bg-cover  bg-center flex justify-center items-center"
                                 data-position="LB">
                                 <div id="" class="lb w-full h-max  mx-3 text-center font-bold">
                                     <!-- --------------------------------------------------------------------- -->
@@ -298,7 +296,7 @@
                             </button>
                             <!-- carte 2  -->
                             <button data-id="4"
-                                class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center"
+                                class=" card card-details lg:h-60 max-lg:h-56 md:h-56 max-md:h-44 sm:h-36 max-sm:h-32 max-sm:w-[30%] w-[18%]  bg-[url('images/badge_gold.webp')] hover:shadow-xl hover:shadow-green-600   bg-cover  bg-center flex justify-center items-center"
                                 data-position="CB">
                                 <div id="" class="cb w-full h-max  mx-3 text-center font-bold">
                                     <!-- --------------------------------------------------------------------- -->
@@ -309,7 +307,7 @@
                             </button>
                             <!-- carte 3 -->
                             <button data-id="3"
-                                class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center"
+                                class=" card card-details lg:h-60 max-lg:h-56 md:h-56 max-md:h-44 sm:h-36 max-sm:h-32 max-sm:w-[30%] w-[18%]  bg-[url('images/badge_gold.webp')] hover:shadow-xl hover:shadow-green-600   bg-cover  bg-center flex justify-center items-center"
                                 data-position="CB">
                                 <div id="" class="cb w-full h-max  mx-3 text-center font-bold">
                                     <!-- --------------------------------------------------------------------- -->
@@ -319,7 +317,7 @@
                             </button>
                             <!-- carte 4 -->
                             <button data-id="2"
-                                class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center"
+                                class="relative bottom-10 card card-details lg:h-60 max-lg:h-56 md:h-56 max-md:h-44 sm:h-36 max-sm:h-32 max-sm:w-[30%] w-[18%]  bg-[url('images/badge_gold.webp')] hover:shadow-xl hover:shadow-green-600   bg-cover  bg-center flex justify-center items-center"
                                 data-position="RB">
                                 <div id="" class="rb w-full h-max  mx-3 text-center font-bold">
                                     <!-- --------------------------------------------------------------------- -->
@@ -331,9 +329,9 @@
 
                         <!-- Gardien +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
                         <div id="gardien"
-                            class="relative bottom-6 flex flex-row w-full place-items-center justify-center lg:gap-4 hidden">
+                            class="relative bottom-6 max-sm:bottom-2 flex flex-row justify-center place-items-center w-full max-sm:w-[80%] lg:gap-4 hidden">
                             <button data-id="1"
-                                class=" card card-details h-60 w-[18%]  bg-[url('images/badge_gold.webp')]  bg-cover  bg-center flex justify-center items-center"
+                                class=" card card-details lg:h-60 max-lg:h-56 md:h-56 max-md:h-44 sm:h-36 max-sm:h-32 max-sm:w-[30%] w-[18%]  bg-[url('images/badge_gold.webp')] hover:shadow-xl hover:shadow-green-600   bg-cover  bg-center flex justify-center items-center"
                                 data-position="GK">
                                 <div id="" class="gk w-full h-max  mx-3 text-center font-bold">
                                     <!-- --------------------------------------------------------------------- -->
@@ -351,6 +349,11 @@
 
         </section>
         <!-- ============================================================================================================================== -->
+
+
+
+
+
 
         <!-- ============================================================================================================================== -->
         <!--section pour afficher les joueurs restants (réservistes)-->
@@ -371,10 +374,12 @@
     </div>
 
 </body>
+
+<!-- Les scripts js -->
 <script src="js/players.js">//le fichier js qui contient le tableau de players</script>
-<script src="js/ajouterJoueur2.js"></script>
+<script src="js/positionForme.js"></script>
 <script src="js/switchFormation.js"></script>
-<script src="js/carteTerrain2.js"></script>
+<script src="js/AjouterCarteJ.js"></script>
 <script src="js/afficherCarteLS.js"></script>
 <script src="js/switchPlayers.js"></script>
 <script src="js/showCarte.js"></script>
